@@ -9,28 +9,37 @@
     This order is how they will appear in the dialog
     Make any order you want from top to bottom-->
     <string-array name="changelog_items">
-        <item>Some changelog thing lkjh l lkjh slkjh lkjh s,mnb lkjhs lkjh poiuy slkjh</item>
-        <item>Another changelog thing ;lkj d;lkj ;lkjs ;lkj ;lkj s;lkj ;lkj s;lkj ;lkj ;lks ;lkj ;lkj</item>
-        <item>Some more changelog things</item>
-        <item>Some even more changelog thing</item>
-        <item>And another changelog thing ;lsj; lkjs ;lkj ; lkj;lsjk ;sklj s;lkj s;lk js;lkj s;lkj</item>
-        <item>How many changelog things</item>
-        <item>What a long changelog!!!</item>
-        <item>Is it twenty already?</item>
-        <item>Are we there yet?</item>
-        <item>Live long and prosper</item>
-        <item>So say we all</item>
-        <item>Patience you must have</item>
-        <item>Great scot!!!</item>
-        <item>No disassemble…</item>
-        <item>Almost there</item>
-        <item>Done with changelog</item>
+        <item>Added display option in Settings to address Max Power Saving resolution</item>
+        <item>Made more modes available for N4 Camera. Seperate files</item>
+        <item>White Gallery should now be completely fixed for users that still have issues</item>
+        <item>Busybox rework and updated</item>
+        <item>Added fix for Gallery Auto Adjust</item>
+        <item>Added charging fix for all kernel. Thanks to Ghost</item>
+        <item>Updated N4 Camera filters</item>
+        <item>Signature verification removal reworked</item>
+        <item>Uneeded libs cleaned out</item>
+        <item>Night clock fixed from blinking</item>
+        <item>Fix some lags when opening settings app</item>
+        <item>Added 10 custom GPS config file in rom control. User can try which works best for them.</item>
+        <item>MAX Power Saving Mode fixed. No need for rom control fix</item>
+        <item>Fixed SystemUI FC when applying Power Saving mode</item>
+        <item>New Wifi Password Manager</item>
+        <item>Increase Wifi connection keep alive</item>
+        <item>Increase Mobile Signal connection keep alive</item>
+        <item>Improve power management</item>
+        <item>Complete Gallery auto enhance fix</item>
+		<item>No need for screen density slider, Power should modes works out of the box</item>
+		<item>Improvements to s7e and N7 camera</item>
+		<item>Touchwiz updated with more functionality. Now long press to launch action</item>
+		<item>Added Matrix effect in recent panel</item>
+		<item>Added Launcher option for infinite scrolling in rom control and aroma</item>
+        <item>And many more. Please see our thread for full changelog</item>
     </string-array>
 
     <!--This will be the dialog title.
     Put your own rom version and name.
     Have fun-->
-    <string name="rom_version_for_changelog">build v1.0 6thgearrom</string>
+    <string name="rom_version_for_changelog">Phronesis N7 Port V4</string>
 
 
 </resources>

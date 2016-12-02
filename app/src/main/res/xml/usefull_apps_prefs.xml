@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:phronesis="http://schemas.android.com/apk/res-auto">
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Open device settings"
+        android:title="Open Settings"
+        phronesis:componentName="com.android.settings/com.android.settings.Settings" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Control Root access"
+        android:title="SuperSu"
+        phronesis:componentName="eu.chainfire.supersu/eu.chainfire.supersu.MainActivity-Material" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Launch and add apps to toolbox"
+        android:title="Toolbox Control"
+        phronesis:componentName="com.wubydax.toolboxsettings/com.wubydax.toolboxsettings/com.wubydax.toolboxsettings/com.wubydax.toolboxsettings.ToolboxSettings" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Enable apps on UPSM and Emergency mode"
+        android:title="UPSM Manager"
+        phronesis:componentName="mobi.xperiacle.upsm.manager/mobi.xperiacle.upsm.manager.MainActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Block Advertisements"
+        android:title="AdAway"
+        phronesis:componentName="org.adaway/org.adaway.ui.BaseActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Terminal Emulator for advanced users"
+        android:title="Terminal Emulator"
+        phronesis:componentName="jackpal.androidterm/jackpal.androidterm.Term" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Interact with your device over wifi connection"
+        android:title="Root FTP Server"
+        phronesis:componentName="waterdev.rftp/waterdev.rftp.MainActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Show, Backup and Restore"
+        android:title="WIFI Password Management"
+        phronesis:componentName="com.vorsk.wifirecovery/com.vorsk.wifirecovery.HomeActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Change screen display scale dynamically"
+        android:title="Dynamic DPIChange"
+        phronesis:componentName="com.wubydax.changedpi/com.wubydax.changedpi.MainActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Configure flashlight for Calls &amp; SMS"
+        android:title="Caller Flashlight Settings"
+        phronesis:componentName="ru.evg.and.app.flashoncall/ru.evg.and.app.flashoncall.StartActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Configure flashlight for Calls &amp; SMS"
+        android:title="Toolbox Controller"
+        phronesis:componentName="com.wubydax.toolboxsettings/com.wubydax.toolboxsettings.ToolboxSettings" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Fix GPS to your continent location"
+        android:title="FasterGPS"
+        phronesis:componentName="org.fastergps/org.fastergps.ui.BaseActivity" />
+</PreferenceScreen>

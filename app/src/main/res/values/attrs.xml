@@ -55,6 +55,7 @@
         <attr name="intentSeparator" format="string"/>
         <attr name="showSearch" format="boolean"/>
     </declare-styleable>
+    <attr name="soundpanel_logo" format="reference"/>
     <declare-styleable name="RebootView">
         <attr name="rebootText" format="string"/>
         <attr name="rebootColor" format="color"/>

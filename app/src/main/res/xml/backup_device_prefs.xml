@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:phronesis="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Device Settings and Data Backup">
+        <PreferenceScreen android:title="Backup Settings and Data">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Backup Permissions on Device"
+                phronesis:scriptFileName="permissionsbackup.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Revoke all granted permissions on Device"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="revokegrantedpermissions.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Reset Device Settings"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="resetdevicesettings.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Backup Wifi configurations"
+                phronesis:scriptFileName="wifibackup.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Backup Keyboard data and settings"
+                phronesis:scriptFileName="backupinput1.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Backup Current GPS Config"
+                phronesis:scriptFileName="gps_config_backup.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Backup SMS and MMS"
+                phronesis:scriptFileName="mmssmsbk.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Backup Contacts"
+                phronesis:scriptFileName="contactbk.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Backup Call logs"
+                phronesis:scriptFileName="calllogbk.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Backup Calendar entries"
+                phronesis:scriptFileName="calendarbk.sh" />
+			<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Backup All Accounts"
+                phronesis:scriptFileName="backupdeviceaccounts.sh" />
+			<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Backup Device Settings"
+                phronesis:scriptFileName="backupdevicesettings.sh" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Device Settings and Data Restore">
+        <PreferenceScreen android:title="Restore Settings and Data">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Auto reboots to apply settings"
+                android:title="Restore Permissions on Device"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="permissionsrestore.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Restore Wifi configurations"
+                phronesis:scriptFileName="wifirestore1.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Auto reboots to apply settings"
+                android:title="Restore Keyboard data"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="restoreinput.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Restore Saved GPS Config"
+                phronesis:scriptFileName="gps_config_restore.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Restore SMS and MMS"
+                phronesis:scriptFileName="mmssmsrestore.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Restore Contacts"
+                phronesis:scriptFileName="contactrestore.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Restore Call logs"
+                phronesis:scriptFileName="calllogrestore.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Restore Calendar entries"
+                phronesis:scriptFileName="calendarrestore.sh" />
+			<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Restore Accounts"
+                phronesis:scriptFileName="restoreaccounts.sh" />
+			<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="Restore Device Settings"
+                phronesis:scriptFileName="restoredevicesettings.sh" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Reboot Device">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:icon="@drawable/powerlogo"
+            android:summary=""
+            android:title="Touch to Reboot"
+            phronesis:scriptFileName="softreboot.sh" />
+    </PreferenceCategory>
+</PreferenceScreen>

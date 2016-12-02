@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:phronesis="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Fix White Gallery">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary=""
+            android:title="Fix White Gallery"
+            phronesis:scriptFileName="gallerywhitefix.sh" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Fix Power Saving Mode">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary=""
+            android:title="Fix Power Saving Mode Issues"
+            phronesis:packageNameToKill="com.sec.android.app.launcher"
+            phronesis:scriptFileName="screen_density.sh" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Google Apps Toggle">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary="Remove Google applications"
+            android:title="Disable Google Apps"
+            phronesis:rebootOptions="imminent"
+            phronesis:scriptFileName="googleoff.sh" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary="Install Google applications"
+            android:title="Enable Google Apps"
+            phronesis:rebootOptions="imminent"
+            phronesis:scriptFileName="googleon.sh" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Netflix Control">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary="Enable Netflix - device will auto-reboot"
+            android:title="Netflix ON"
+            phronesis:rebootOptions="imminent"
+            phronesis:scriptFileName="enbnetlib.sh" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary="Disable Netflix - device will auto-reboot"
+            android:title="Netflix OFF"
+            phronesis:rebootOptions="imminent"
+            phronesis:scriptFileName="disnetlib.sh" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Apply Custom GPS Config">
+        <PreferenceScreen android:title="Apply custom gps configurations">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="5.1.1 variant"
+                android:title="Custom 01"
+                phronesis:scriptFileName="gps_101.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="5.1.1 variant"
+                android:title="Custom 02"
+                phronesis:scriptFileName="gps_102.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="5.1.1 variant"
+                android:title="Custom 03"
+                phronesis:scriptFileName="gps_103.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Others"
+                android:title="Custom 04"
+                phronesis:scriptFileName="gps_104.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Others"
+                android:title="Custom 05"
+                phronesis:scriptFileName="gps_105.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Others"
+                android:title="Custom 06"
+                phronesis:scriptFileName="gps_106.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Others"
+                android:title="Custom 07"
+                phronesis:scriptFileName="gps_107.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Others"
+                android:title="Custom 08"
+                phronesis:scriptFileName="gps_108.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Others"
+                android:title="Custom 09"
+                phronesis:scriptFileName="gps_109.sh" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Change Device DPI (Applications might not scale correctly outside 420 and 480 DPIs).">
+        <PreferenceScreen android:title="Change Device DPI Dynamically">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="300 DPI"
+                phronesis:packageNameToKill="com.sec.android.app.launcher"
+                phronesis:scriptFileName="dpi300.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="360 DPI"
+                phronesis:packageNameToKill="com.sec.android.app.launcher"
+                phronesis:scriptFileName="dpi360.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="390 DPI"
+                phronesis:packageNameToKill="com.sec.android.app.launcher"
+                phronesis:scriptFileName="dpi390.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="420 DPI"
+                phronesis:packageNameToKill="com.sec.android.app.launcher"
+                phronesis:scriptFileName="dpi420.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="450 DPI"
+                phronesis:packageNameToKill="com.sec.android.app.launcher"
+                phronesis:scriptFileName="dpi450.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="480 DPI"
+                phronesis:packageNameToKill="com.sec.android.app.launcher"
+                phronesis:scriptFileName="dpi480.sh" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Restore Stock Colors ">
+        <PreferenceScreen android:title="Restore Stock Colors">
+            <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+                android:summary="This action will do a global restore of all colors to Stock"
+                android:title="Stock Global Colors Restore"
+                phronesis:keysList="@array/restore_global_colors_keys"
+                phronesis:packageNameToKill="com.android.systemui"
+                phronesis:titlesList="@array/restore_global_colors_titles"
+                phronesis:valuesList="@array/restore_global_colors_values" />
+            <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+                android:summary="This action will restore Notification Pull Down colors to Stock"
+                android:title="Stock Notification Pull Down Colors"
+                phronesis:keysList="@array/restore_notification_colors_keys"
+                phronesis:packageNameToKill="com.android.systemui"
+                phronesis:titlesList="@array/restore_notification_colors_titles"
+                phronesis:valuesList="@array/restore_notification_colors_values" />
+            <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+                android:summary="This action will restore Weather Items colors to Stock"
+                android:title="Stock LockScreen Weather Colors"
+                phronesis:keysList="@array/restore_lockweather_colors_keys"
+                phronesis:packageNameToKill="com.android.systemui"
+                phronesis:titlesList="@array/restore_lockweather_colors_titles"
+                phronesis:valuesList="@array/restore_lockweather_colors_values" />
+            <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+                android:summary="This action will restore LockScreen Item colors to Stock"
+                android:title="Stock LockScreen Clock Colors"
+                phronesis:keysList="@array/restore_lockscreen_colors_keys"
+                phronesis:titlesList="@array/restore_lockscreen_colors_titles"
+                phronesis:valuesList="@array/restore_lockscreen_colors_values" />
+            <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+                android:summary="This action will restore Statusbar colors to Stock"
+                android:title="Stock Statusbar Colors"
+                phronesis:keysList="@array/restore_statusbar_colors_keys"
+                phronesis:packageNameToKill="com.android.systemui"
+                phronesis:titlesList="@array/restore_statusbar_colors_titles"
+                phronesis:valuesList="@array/restore_statusbar_colors_values" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Fix Viper4Android Profile Path">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary=""
+            android:title="Fix Viper4Android Paths"
+            phronesis:scriptFileName="viperprofilefix.sh" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary=""
+            android:title="Undo Fix for Viper4Android Paths"
+            phronesis:scriptFileName="viperprofilefixundo.sh" />
+    </PreferenceCategory>
+</PreferenceScreen>

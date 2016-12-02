@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:phronesis="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:summary=""
+        android:title="Device softkey Customization">
+        <PreferenceScreen
+            android:summary="Map softkey buttons to your preference"
+            android:title="Customize Soft Buttons">
+            <PreferenceCategory android:title="Customize Button Behavior" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="haptic_feedback_enabled"
+                android:summaryOff="Extra haptic enabled"
+                android:summaryOn="Extra haptic disabled"
+                android:title="Haptic Feedback" />
+            <PreferenceScreen
+                android:summary="Choose button behavior"
+                android:title="Home Button">
+                <PreferenceCategory android:title="Home Button">
+                    <SwitchPreference
+                        android:defaultValue="true"
+                        android:key="homewake_toggle"
+                        android:summaryOff="Home button now disabled"
+                        android:summaryOn="Home button will wake phone"
+                        android:title="Enable Home Wake" />
+                </PreferenceCategory>
+                <PreferenceCategory android:title="DoubleTap">
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:defaultValue="101"
+                        android:entries="@array/double_home_entries"
+                        android:entryValues="@array/double_home_values"
+                        android:key="phronesis_double_press_home"
+                        android:title="DoubleTap Assignment" />
+                    <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference
+                        android:key="phronesis_doubletap_home_app"
+                        android:summary="None"
+                        android:title="DoubleTap custom App"
+                        phronesis:showSearch="true" />
+                </PreferenceCategory>
+                <PreferenceCategory android:title="LongPress Assignment">
+                    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                        android:title="Support Now On Tap"
+                        phronesis:rebootOptions="imminent"
+                        phronesis:scriptFileName="homelongpress_gnot.sh" />
+                    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                        android:title="Support Custom Action"
+                        phronesis:rebootOptions="imminent"
+                        phronesis:scriptFileName="homelongpress_custom.sh" />
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:defaultValue="9"
+                        android:entries="@array/long_home_entries"
+                        android:entryValues="@array/long_home_values"
+                        android:key="phronesis_long_press_home"
+                        android:title="LongPress Assignment" />
+                    <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference
+                        android:key="phronesis_longpress_home_app"
+                        android:summary="None"
+                        android:title="LongPress custom App"
+                        phronesis:showSearch="true" />
+                </PreferenceCategory>
+                <PreferenceCategory android:title="TripleTap">
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:defaultValue="888"
+                        android:dependency="home_tripletap_button"
+                        android:entries="@array/double_home_entries"
+                        android:entryValues="@array/double_home_values"
+                        android:key="home_tripletap_button"
+                        android:title="TripleTap Assignment" />
+                    <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference
+                        android:key="tripletap_custom_app"
+                        android:summary="None"
+                        android:title="TripleTap Application"
+                        phronesis:showSearch="true" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:summary="Choose button behavior"
+                android:title="Left Capacitive Key">
+                <PreferenceCategory android:title="LongPress Action">
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:defaultValue="102"
+                        android:entries="@array/long_menu_entries"
+                        android:entryValues="@array/long_menu_values"
+                        android:key="phronesis_long_press_recent"
+                        android:title="LongPress Assignment" />
+                    <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference
+                        android:key="phronesis_longpress_recent_app"
+                        android:summary="None"
+                        android:title="LongPress custom App"
+                        phronesis:showSearch="true" />
+                </PreferenceCategory>
+                <PreferenceCategory android:title="ShortPress Action">
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:defaultValue="4"
+                        android:entries="@array/click_menu_entries"
+                        android:entryValues="@array/click_menu_values"
+                        android:key="phronesis_shortpress_recent"
+                        android:title="ShortPress Assignment" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:summary="Choose button behavior"
+                android:title="Right Capacitive Key">
+                <PreferenceCategory android:title="Right Capacitive Key">
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:defaultValue="11"
+                        android:entries="@array/long_back_entries"
+                        android:entryValues="@array/long_back_values"
+                        android:key="phronesis_long_press_back"
+                        android:title="Longpress Assignment" />
+                    <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference
+                        android:key="phronesis_longpress_back_app"
+                        android:summary="None"
+                        android:title="LongPress custom App"
+                        phronesis:showSearch="true" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:summary="Choose button behavior"
+                android:title="Power Button">
+                <PreferenceCategory android:title="Power Button">
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:defaultValue="999"
+                        android:entries="@array/power_doubletap_entries"
+                        android:entryValues="@array/power_doubletap_values"
+                        android:key="power_doubletap_button"
+                        android:title="DoubleTap Assignment" />
+                    <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference
+                        android:key="power_custom_app"
+                        android:summary="None"
+                        android:title="DoubleTap Application"
+                        phronesis:showSearch="true" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary=""
+        android:title="Statusbar Vitual Key Customization">
+        <PreferenceScreen
+            android:summary="Customize Left | Center | Right Buttons"
+            android:title="Map Statusbar Virtual buttons">
+            <PreferenceCategory android:title="Button Behaviors (Activate ONLY one in each category)" />
+            <PreferenceCategory android:title="Left Virtual Button" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="cocoyaya_leftcornerhome"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled. LongPress set to Home custom action"
+                android:title="Enable for Home Key" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="cocoyaya_leftcornerlock"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled. LongPress for Power menu"
+                android:title="Enable for Screen Off" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="cocoyaya_leftcornertask"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled. LongPress set to MultiWindow"
+                android:title="Enable for Recent Task" />
+            <PreferenceCategory android:title="Center Virtual Button" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="cocoyaya_centerhome"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled. LongPress set to Home LP custom"
+                android:title="Enable for Home Key" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="cocoyaya_centerlock"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled. LongPress for Power menu"
+                android:title="Enable for Screen Off" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="cocoyaya_centertask"
+                android:summaryOff="Disabled"
+                android:summaryOn="LongPress for Multi Windows"
+                android:title="Enable for Recent Task" />
+            <PreferenceCategory android:title="Right Virtual Button" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="cocoyaya_rightcornerhome"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled. LongPress set to Home LP custom"
+                android:title="Enable for Home Key" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="cocoyaya_rightcornerlock"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled. LongPress for Power menu"
+                android:title="Enable for Screen Off" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="cocoyaya_rightcornertask"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled. LongPress set to MultiWindow"
+                android:title="Enable for Recent Task" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Statusbar DoubleTap" />
+    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+        android:entries="@array/double_tap_actions"
+        android:entryValues="@array/double_tap_values"
+        android:key="double_tap_statusbar_action"
+        android:summary=""
+        android:title="Statusbar Double Tap Action" />
+    <PreferenceCategory
+        android:summary="Swiping left or right of screen with palm"
+        android:title="Screen palm swiping">
+        <PreferenceScreen android:title="Gesture Anywhere on Home Screen">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="999"
+                android:entries="@array/launcher_gesture_entries"
+                android:entryValues="@array/launcher_gesture_values"
+                android:key="doubletap"
+                android:title="Double tap"
+                phronesis:packageNameToKill="com.sec.android.app.launcher" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="999"
+                android:entries="@array/launcher_gesture_entries"
+                android:entryValues="@array/launcher_gesture_values"
+                android:key="swipe_up"
+                android:title="Swipe Up"
+                phronesis:packageNameToKill="com.sec.android.app.launcher" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="999"
+                android:entries="@array/launcher_gesture_entries"
+                android:entryValues="@array/launcher_gesture_values"
+                android:key="swipe_down"
+                android:title="Swipe Down"
+                phronesis:packageNameToKill="com.sec.android.app.launcher" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>
