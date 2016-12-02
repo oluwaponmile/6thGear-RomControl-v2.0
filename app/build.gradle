@@ -22,10 +22,10 @@ keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 android {
     signingConfigs {
         PhronesisSigningConfig {
-            keyAlias 'prcaliaskeyfile'
-            keyPassword 'Zaq1xsw2'
-            storeFile file('C:/StudioProjects/PhronesisRomControlv2.1/key/prcstorekeyfile.jks')
-            storePassword 'Zaq1xsw2'
+            keyAlias 'keyaliasfilehere'
+            keyPassword 'passwordhere'
+            storeFile file('pathtokeystorefilehere')
+            storePassword 'passwordhere'
         }
     }
     compileSdkVersion 24
