@@ -20,9 +20,9 @@
     <!--In this array you will put the icons for contact information,
     for example xda icon for your xda thread, site icon for your site, facebook icon and so on-->
     <array name="about_contact_us_drawables">
-        <item>@drawable/icon_2</item>
-        <item>@drawable/icon_1</item>
-        <item>@drawable/icon_3</item>
+        <item>@drawable/phones</item>
+        <item>@drawable/phones</item>
+        <item>@drawable/phones</item>
     </array>
 
     <!--In this array you will put the titles for your contact info items. Keep the order consistent between all 3 arrays-->
@@ -43,9 +43,9 @@
 
     <!--Team info arrays-->
     <array name="about_team_drawables">
-        <item>@drawable/icon_5</item>
-        <item>@drawable/icon_1</item>
-        <item>@drawable/icon_3</item>
+        <item>@drawable/team</item>
+        <item>@drawable/team</item>
+        <item>@drawable/team</item>
     </array>
     <string-array name="about_team_names">
         <item>Oluwaponmile - The main rom developer</item>
@@ -62,8 +62,8 @@
 
     <!--Credits and thanks info arrays-->
     <array name="about_credits_drawables">
-        <item>@drawable/icon_1</item>
-        <item>@drawable/icon_3</item>
+        <item>@drawable/credit</item>
+        <item>@drawable/credit</item>
     </array>
     <string-array name="about_credits_names">
         <item>Daxgirl - For her tremendious effort on rom control project</item>

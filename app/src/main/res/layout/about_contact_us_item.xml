@@ -13,7 +13,7 @@
         android:id="@+id/contactUsImage"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/icon_2"
+        android:src="@drawable/contactus"
         app:civ_border_width="0dp"
         android:elevation="4dp"
         android:layout_centerHorizontal="true"
