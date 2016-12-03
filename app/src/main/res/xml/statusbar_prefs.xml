@@ -4,7 +4,7 @@
     <PreferenceCategory android:title="Icon Alignments &amp; Visibility">
         <PreferenceScreen android:title="Visibility and Alignments">
             <PreferenceCategory android:title="Set Icon Visibility " />
-            <PreferenceScreen android:title="Volume + Bluetooth &amp; Alarm Visibility">
+            <PreferenceScreen android:title="Volume + Bluetooth &amp; Alarm">
                 <PreferenceCategory android:title="Set Options">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                         android:defaultValue="true"
@@ -99,6 +99,38 @@
                         android:title="Date Color" />
                 </PreferenceScreen>
             </PreferenceCategory>
+            <PreferenceCategory android:title="CPU Speed Info">
+                <PreferenceScreen android:title="CPU Speed Info Display">
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                        android:defaultValue="1"
+                        android:key="cpu_speed"
+                        android:summaryOff="Hidden"
+                        android:summaryOn="Shown"
+                        android:title="CPU Speed Info" />
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                        android:defaultValue="0"
+                        android:dependency="cpu_speed"
+                        android:key="cpu_location"
+                        android:summaryOff="Shown on Left"
+                        android:summaryOn="Shown on Right"
+                        android:title="CPU Info Location"
+                        phronesis:packageNameToKill="com.android.systemui" />
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                        android:defaultValue="0"
+                        android:dependency="cpu_speed"
+                        android:key="cpu_gov"
+                        android:summaryOff="CPU Governor Hidden"
+                        android:summaryOn="CPU Governor Showing"
+                        android:title="CPU Governor Info" />
+                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                        alphaSlider="true"
+                        hexValue="true"
+                        android:defaultValue="-1"
+                        android:key="cpu_speed_color"
+                        android:summary="Color of statusbar CPU Info"
+                        android:title="CPU Info Color" />
+                </PreferenceScreen>
+            </PreferenceCategory>
             <PreferenceCategory
                 android:summary="Statusbar signal location"
                 android:title="Set statusbar signal position">
@@ -131,40 +163,6 @@
                         android:title="Carrier Text Color" />
                 </PreferenceCategory>
             </PreferenceScreen>
-        </PreferenceScreen>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="CPU Speed Info">
-        <PreferenceScreen android:title="CPU Speed Info">
-            <PreferenceCategory android:title="CPU Speed Info">
-                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-                    android:defaultValue="1"
-                    android:key="cpu_speed"
-                    android:summaryOff="CPU Speed Hidden"
-                    android:summaryOn="CPU Speed Showing"
-                    android:title="CPU Speed Info" />
-                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-                    android:defaultValue="0"
-                    android:dependency="cpu_speed"
-                    android:key="cpu_location"
-                    android:summaryOff="CPU Showing on the Left"
-                    android:summaryOn="CPU Showing on the Right"
-                    android:title="CPU Info Location"
-                    phronesis:packageNameToKill="com.android.systemui" />
-                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-                    android:defaultValue="0"
-                    android:dependency="cpu_speed"
-                    android:key="cpu_gov"
-                    android:summaryOff="CPU Governor Hidden"
-                    android:summaryOn="CPU Governor Showing"
-                    android:title="CPU Governor Info" />
-                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    alphaSlider="true"
-                    hexValue="true"
-                    android:defaultValue="-1"
-                    android:key="cpu_speed_color"
-                    android:summary="Color of statusbar CPU Info"
-                    android:title="CPU Info Color" />
-            </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:title="Immersive Mode">
@@ -307,98 +305,199 @@
             </PreferenceScreen>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Network Traffic Speed Display">
-        <PreferenceScreen android:title="Network Traffic Speed">
-            <PreferenceCategory android:title="Network data">
-                <com.wubydax.romcontrol.v2.prefs.MyListPreference
-                    android:defaultValue="3"
-                    android:entries="@array/traffic_state_items"
-                    android:entryValues="@array/traffic_state_values"
-                    android:key="network_traffic_state"
-                    android:title="Displayed traffic info"
-                    phronesis:dependentValue="0" />
-                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-                    android:defaultValue="false"
-                    android:dependency="network_traffic_state"
-                    android:key="network_traffic_unit"
-                    android:summaryOff="Displayed in Bits (default)"
-                    android:summaryOn="Displayed in Bytes"
-                    android:title="Display data in Bytes" />
+    <PreferenceCategory android:title="Network Speed Display">
+        <PreferenceScreen android:title="Speed Display &amp; Location Options">
+            <PreferenceCategory android:title="Left Network Traffic Speed Display">
+                <PreferenceScreen android:title="Leftside Display Option">
+                    <PreferenceCategory android:title="Network data">
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="3"
+                            android:entries="@array/traffic_state_items"
+                            android:entryValues="@array/traffic_state_values"
+                            android:key="network_traffic1_state"
+                            android:title="Displayed traffic info"
+                            phronesis:dependentValue="0" />
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                            android:defaultValue="false"
+                            android:dependency="network_traffic1_state"
+                            android:key="network_traffic1_unit"
+                            android:summaryOff="Displayed in Bits (default)"
+                            android:summaryOn="Displayed in Bytes"
+                            android:title="Display data in Bytes" />
+                    </PreferenceCategory>
+                    <PreferenceCategory
+                        android:dependency="network_traffic1_state"
+                        android:title="Arrows Display Option">
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                            android:defaultValue="true"
+                            android:dependency="network_traffic1_state"
+                            android:key="network_traffic1_show_arrows"
+                            android:summaryOff="Arrows hidden"
+                            android:summaryOn="Arrows shown"
+                            android:title="Show traffic arrows" />
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="0"
+                            android:dependency="network_traffic1_show_arrows"
+                            android:entries="@array/arrow_position_entries"
+                            android:entryValues="@array/arrow_position_values"
+                            android:key="network_traffic1_arrows_position"
+                            android:title="Arrows Position" />
+                    </PreferenceCategory>
+                    <PreferenceCategory
+                        android:dependency="network_traffic1_state"
+                        android:title="Display options">
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                            android:defaultValue="false"
+                            android:key="network_traffic1_autohide"
+                            android:summaryOff="Displayed always"
+                            android:summaryOn="Autohide enabled"
+                            android:title="Autohide on low traffic" />
+                        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                            android:defaultValue="10"
+                            android:dependency="network_traffic1_autohide"
+                            android:key="network_traffic1_threshold"
+                            android:title="Autohide threshold"
+                            phronesis:maxValue="100"
+                            phronesis:unitsValue="Kb" />
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="0"
+                            android:entries="@array/traffic_style_entries"
+                            android:entryValues="@array/traffic_style_entry_values"
+                            android:key="network_traffic1_text_style"
+                            android:title="Font style" />
+                        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                            android:defaultValue="10"
+                            android:key="network_traffic1_scale"
+                            android:title="Text size scale factor"
+                            phronesis:maxValue="10" />
+                    </PreferenceCategory>
+                    <PreferenceCategory
+                        android:dependency="network_traffic1_state"
+                        android:title="Network traffic colors">
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                            android:defaultValue="true"
+                            android:key="network_traffic1_global_color"
+                            android:summaryOff="Global color will apply to all elements"
+                            android:summaryOn="All elements can be colored separately"
+                            android:title="Separate colors for elements" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="\#ffffff"
+                            android:key="network_traffic1_color"
+                            android:title="Global color" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="\#ffffff"
+                            android:dependency="network_traffic1_global_color"
+                            android:key="network_traffic1_upload_color"
+                            android:title="Upload text color" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="\#ffffff"
+                            android:dependency="network_traffic1_global_color"
+                            android:key="network_traffic1_download_color"
+                            android:title="Download text color" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="\#ffffff"
+                            android:dependency="network_traffic1_global_color"
+                            android:key="network_traffic1_arrow_color"
+                            android:title="Traffic arrows color"
+                            phronesis:packageNameToKill="com.android.systemui" />
+                    </PreferenceCategory>
+                </PreferenceScreen>
             </PreferenceCategory>
-            <PreferenceCategory
-                android:dependency="network_traffic_state"
-                android:title="Arrows Display Option">
-                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-                    android:defaultValue="true"
-                    android:dependency="network_traffic_state"
-                    android:key="network_traffic_show_arrows"
-                    android:summaryOff="Arrows hidden"
-                    android:summaryOn="Arrows shown"
-                    android:title="Show traffic arrows" />
-                <com.wubydax.romcontrol.v2.prefs.MyListPreference
-                    android:defaultValue="0"
-                    android:dependency="network_traffic_show_arrows"
-                    android:entries="@array/arrow_position_entries"
-                    android:entryValues="@array/arrow_position_values"
-                    android:key="network_traffic_arrows_position"
-                    android:title="Arrows Position" />
-            </PreferenceCategory>
-            <PreferenceCategory
-                android:dependency="network_traffic_state"
-                android:title="Display options">
-                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-                    android:defaultValue="false"
-                    android:key="network_traffic_autohide"
-                    android:summaryOff="Displayed always"
-                    android:summaryOn="Autohide enabled"
-                    android:title="Autohide on low traffic" />
-                <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
-                    android:defaultValue="10"
-                    android:dependency="network_traffic_autohide"
-                    android:key="network_traffic_threshold"
-                    android:title="Autohide threshold"
-                    phronesis:maxValue="100"
-                    phronesis:unitsValue="Kb" />
-                <com.wubydax.romcontrol.v2.prefs.MyListPreference
-                    android:defaultValue="0"
-                    android:entries="@array/traffic_style_entries"
-                    android:entryValues="@array/traffic_style_entry_values"
-                    android:key="network_traffic_text_style"
-                    android:title="Font style" />
-                <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
-                    android:defaultValue="10"
-                    android:key="network_traffic_scale"
-                    android:title="Text size scale factor"
-                    phronesis:maxValue="10" />
-            </PreferenceCategory>
-            <PreferenceCategory
-                android:dependency="network_traffic_state"
-                android:title="Network traffic colors">
-                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-                    android:defaultValue="true"
-                    android:key="network_traffic_global_color"
-                    android:summaryOff="Global color will apply to all elements"
-                    android:summaryOn="All elements can be colored separately"
-                    android:title="Separate colors for elements" />
-                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffff"
-                    android:key="network_traffic_color"
-                    android:title="Global color" />
-                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffff"
-                    android:dependency="network_traffic_global_color"
-                    android:key="network_traffic_upload_color"
-                    android:title="Upload text color" />
-                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffff"
-                    android:dependency="network_traffic_global_color"
-                    android:key="network_traffic_download_color"
-                    android:title="Download text color" />
-                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffff"
-                    android:dependency="network_traffic_global_color"
-                    android:key="network_traffic_arrow_color"
-                    android:title="Traffic arrows color" />
+            <PreferenceCategory android:title="Right Network Traffic Speed Display">
+                <PreferenceScreen android:title="Rightside Display Option">
+                    <PreferenceCategory android:title="Network data">
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="3"
+                            android:entries="@array/traffic_state_items"
+                            android:entryValues="@array/traffic_state_values"
+                            android:key="network_traffic_state"
+                            android:title="Displayed traffic info"
+                            phronesis:dependentValue="0" />
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                            android:defaultValue="false"
+                            android:dependency="network_traffic_state"
+                            android:key="network_traffic_unit"
+                            android:summaryOff="Displayed in Bits (default)"
+                            android:summaryOn="Displayed in Bytes"
+                            android:title="Display data in Bytes" />
+                    </PreferenceCategory>
+                    <PreferenceCategory
+                        android:dependency="network_traffic_state"
+                        android:title="Arrows Display Option">
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                            android:defaultValue="true"
+                            android:dependency="network_traffic_state"
+                            android:key="network_traffic_show_arrows"
+                            android:summaryOff="Arrows hidden"
+                            android:summaryOn="Arrows shown"
+                            android:title="Show traffic arrows" />
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="0"
+                            android:dependency="network_traffic_show_arrows"
+                            android:entries="@array/arrow_position_entries"
+                            android:entryValues="@array/arrow_position_values"
+                            android:key="network_traffic_arrows_position"
+                            android:title="Arrows Position" />
+                    </PreferenceCategory>
+                    <PreferenceCategory
+                        android:dependency="network_traffic_state"
+                        android:title="Display options">
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                            android:defaultValue="false"
+                            android:key="network_traffic_autohide"
+                            android:summaryOff="Displayed always"
+                            android:summaryOn="Autohide enabled"
+                            android:title="Autohide on low traffic" />
+                        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                            android:defaultValue="10"
+                            android:dependency="network_traffic_autohide"
+                            android:key="network_traffic_threshold"
+                            android:title="Autohide threshold"
+                            phronesis:maxValue="100"
+                            phronesis:unitsValue="Kb" />
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="0"
+                            android:entries="@array/traffic_style_entries"
+                            android:entryValues="@array/traffic_style_entry_values"
+                            android:key="network_traffic_text_style"
+                            android:title="Font style" />
+                        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                            android:defaultValue="10"
+                            android:key="network_traffic_scale"
+                            android:title="Text size scale factor"
+                            phronesis:maxValue="10" />
+                    </PreferenceCategory>
+                    <PreferenceCategory
+                        android:dependency="network_traffic_state"
+                        android:title="Network traffic colors">
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                            android:defaultValue="true"
+                            android:key="network_traffic_global_color"
+                            android:summaryOff="Global color will apply to all elements"
+                            android:summaryOn="All elements can be colored separately"
+                            android:title="Separate colors for elements" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="\#ffffff"
+                            android:key="network_traffic_color"
+                            android:title="Global color" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="\#ffffff"
+                            android:dependency="network_traffic_global_color"
+                            android:key="network_traffic_upload_color"
+                            android:title="Upload text color" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="\#ffffff"
+                            android:dependency="network_traffic_global_color"
+                            android:key="network_traffic_download_color"
+                            android:title="Download text color" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="\#ffffff"
+                            android:dependency="network_traffic_global_color"
+                            android:key="network_traffic_arrow_color"
+                            android:title="Traffic arrows color"
+                            phronesis:packageNameToKill="com.android.systemui" />
+                    </PreferenceCategory>
+                </PreferenceScreen>
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
