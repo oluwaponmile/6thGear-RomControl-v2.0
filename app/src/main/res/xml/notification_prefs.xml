@@ -396,12 +396,6 @@
                         android:key="expand_header_icon_color"
                         android:summary="Set custom color"
                         android:title="Expanded header setting icon color" />
-                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                        android:defaultValue="\#ff325d84"
-                        android:dependency="link_colors"
-                        android:key="edit_color"
-                        android:summary="Choose text color"
-                        android:title="Edit text color" />
                 </PreferenceCategory>
             </PreferenceScreen>
             <PreferenceCategory android:title="Pull Down Item &amp; Background Color " />

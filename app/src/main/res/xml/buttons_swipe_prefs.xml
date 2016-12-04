@@ -2,6 +2,44 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:phronesis="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory
+        android:summary="Swiping left or right of screen with palm"
+        android:title="Screen palm swiping">
+        <PreferenceScreen android:title="Swipe right or left actions">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:entries="@array/sweep_keyguard_action"
+                android:entryValues="@array/sweep_keyguard_values"
+                android:key="phronesis_sweep_right_keyguard"
+                android:title="Swiping left on lockscreen" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:entries="@array/sweep_keyguard_action"
+                android:entryValues="@array/sweep_keyguard_values"
+                android:key="phronesis_sweep_left_keyguard"
+                android:title="Swiping right on lockscreen" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:entries="@array/sweep_action"
+                android:entryValues="@array/sweep_values"
+                android:key="phronesis_sweep_right"
+                android:title="Swipe left action" />
+            <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference
+                android:key="phronesis_sweep_right_define"
+                android:summary="None"
+                android:title="SwipeLeft Custom App"
+                phronesis:intentSeparator=";"
+                phronesis:showSearch="true" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:entries="@array/sweep_action"
+                android:entryValues="@array/sweep_values"
+                android:key="phronesis_sweep_left"
+                android:title="Swipe right action" />
+            <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference
+                android:key="phronesis_sweep_left_define"
+                android:summary="None"
+                android:title="SwipeRight Custom App"
+                phronesis:intentSeparator=";"
+                phronesis:showSearch="true" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
         android:summary=""
         android:title="Device softkey Customization">
         <PreferenceScreen
