@@ -25,6 +25,19 @@
             phronesis:scriptFileName="homelongpress_custom.sh" />
     </PreferenceCategory>
     <PreferenceCategory android:title="---------------------------------------------------------------" />
+    <PreferenceCategory android:title="Samsung Gallery Preference">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary="Cloud sync with white gallery fix"
+            android:title="Gallery With Sync"
+            phronesis:rebootOptions="imminent"
+            phronesis:scriptFileName="gallerywithsync.sh" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary="No sync feature"
+            android:title="Gallery Without Sync"
+            phronesis:rebootOptions="imminent"
+            phronesis:scriptFileName="gallerywithoutsync.sh" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="---------------------------------------------------------------" />
     <PreferenceCategory android:title="Launcher Preference">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:title="Infinite Scrolling"
