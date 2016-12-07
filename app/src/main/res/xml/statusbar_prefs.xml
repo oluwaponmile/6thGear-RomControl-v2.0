@@ -113,6 +113,7 @@
                         android:key="cpu_location"
                         android:summaryOff="Shown on Left"
                         android:summaryOn="Shown on Right"
+                        phronesis:isSilent="false"
                         android:title="CPU Info Location"
                         phronesis:packageNameToKill="com.android.systemui" />
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
