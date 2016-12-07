@@ -102,7 +102,7 @@
             <PreferenceCategory android:title="CPU Speed Info">
                 <PreferenceScreen android:title="CPU Speed Info Display">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-                        android:defaultValue="1"
+                        android:defaultValue="0"
                         android:key="cpu_speed"
                         android:summaryOff="Hidden"
                         android:summaryOn="Shown"
@@ -312,7 +312,7 @@
                 <PreferenceScreen android:title="Leftside Display Option">
                     <PreferenceCategory android:title="Network data">
                         <com.wubydax.romcontrol.v2.prefs.MyListPreference
-                            android:defaultValue="3"
+                            android:defaultValue="0"
                             android:entries="@array/traffic_state_items"
                             android:entryValues="@array/traffic_state_values"
                             android:key="network_traffic1_state"
