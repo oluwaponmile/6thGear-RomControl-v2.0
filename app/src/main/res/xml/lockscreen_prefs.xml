@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:phronesis="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory android:title="Lockscreen Items &amp; Carrier Visibility">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Lockscreen Items &amp; Carrier Visibility">
         <PreferenceScreen android:title="Visibility and Alignments">
-            <PreferenceCategory android:title="Lockscreen Next Alarm" />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Lockscreen Next Alarm" />
             <PreferenceScreen android:title="Next Alarm Preference">
-                <PreferenceCategory android:title="Set Options">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Set Options">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                         android:defaultValue="false"
                         android:key="next_alarm"
@@ -21,9 +27,12 @@
                         phronesis:packageNameToKill="com.android.systemui" />
                 </PreferenceCategory>
             </PreferenceScreen>
-            <PreferenceCategory android:title="Lockscreen Owners Info Text Color " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Lockscreen Owners Info Text Color " />
             <PreferenceScreen android:title="Owner Info Color ">
                 <PreferenceCategory
+                    android:layout="@layout/preferences_category"
                     android:summary="Clock display and alignment"
                     android:title="Set Color">
                     <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
@@ -35,9 +44,12 @@
                         android:title="Lockscreen Owner Info " />
                 </PreferenceCategory>
             </PreferenceScreen>
-            <PreferenceCategory android:title="Carrier &amp; Custom Text " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Carrier &amp; Custom Text " />
             <PreferenceScreen android:title="Carrier Text &amp; Color  ">
                 <PreferenceCategory
+                    android:layout="@layout/preferences_category"
                     android:summary="Carrier text and color"
                     android:title="Set Text and Color">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
@@ -63,7 +75,9 @@
                         phronesis:rebootDevice="true" />
                 </PreferenceCategory>
             </PreferenceScreen>
-            <PreferenceCategory android:title="Lockscreen Help Text Visibility">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Lockscreen Help Text Visibility">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="true"
                     android:key="unlock_guide_text"
@@ -73,7 +87,9 @@
                     phronesis:isSilent="false"
                     phronesis:packageNameToKill="com.android.systemui" />
             </PreferenceCategory>
-            <PreferenceCategory android:title="Lockscreen Timeout">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Lockscreen Timeout">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference
                     android:defaultValue="10000"
                     android:entries="@array/display_timeout_entries"
@@ -82,7 +98,9 @@
                     android:title="Lockscreen Display Timeout"
                     phronesis:packageNameToKill="com.android.systemui" />
             </PreferenceCategory>
-            <PreferenceCategory android:title="Lockscreen Notifications">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Lockscreen Notifications">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference
                     android:defaultValue="2"
                     android:entries="@array/lockscreen_notif_entries"
@@ -91,7 +109,9 @@
                     android:summary="Number shown on lockscreen"
                     android:title="Notifications Shown on Lockscreen" />
             </PreferenceCategory>
-            <PreferenceCategory android:title="Lockscreen Rotation">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Lockscreen Rotation">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="false"
                     android:key="lockscreen_rotate"
@@ -103,11 +123,15 @@
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Lockscreen Clock Mods">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Lockscreen Clock Mods">
         <PreferenceScreen
             android:summary="Lockscreen Clock Colors &amp; Fonts &amp; seconds"
             android:title="Individual Clock Colors, Fonts &amp; Seconds mod">
-            <PreferenceCategory android:title="Clock Fonts">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Clock Fonts">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="false"
                     android:key="use_lockscreen_clock_font_style"
@@ -121,7 +145,9 @@
                     android:key="lockscreen_clock_font_style"
                     android:title="Lockscreen Clock Font Style" />
             </PreferenceCategory>
-            <PreferenceCategory android:title="Clock Colors">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Clock Colors">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="true"
                     android:key="theme_override"
@@ -173,7 +199,9 @@
                     android:summaryOn="Shown"
                     android:title="Show Seconds" />
             </PreferenceCategory>
-            <PreferenceCategory android:title="Clock Scaling Control">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Clock Scaling Control">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="false"
                     android:key="scaling_toggle"
@@ -211,11 +239,15 @@
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Weather Items &amp; Atmospheric Pressure">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Weather Items &amp; Atmospheric Pressure">
         <PreferenceScreen
             android:summary="Colorize Weather Items &amp; Bar. Pressure mod"
             android:title="Weather Items Colors and Bar. Pressure Toggles">
-            <PreferenceCategory android:title="Colorized Weather">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Colorized Weather">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="false"
                     android:key="phronesis_weather_visibility"
@@ -286,7 +318,9 @@
                     phronesis:packageNameToKill="com.android.systemui"
                     phronesis:scriptFileName="lockweathercolorrestore.sh" />
             </PreferenceCategory>
-            <PreferenceCategory android:title="Barometric Pressure Toggles">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Barometric Pressure Toggles">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="true"
                     android:dependency="phronesis_weather_visibility"
@@ -319,11 +353,15 @@
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="AOD brightness">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="AOD brightness">
         <PreferenceScreen
             android:summary="Adjust AOD brightness"
             android:title="AOD custom brightness">
-            <PreferenceCategory android:title="AOD brightness">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="AOD brightness">
                 <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
                     android:defaultValue="17"
                     android:key="aod_brightness"
@@ -334,7 +372,9 @@
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Restore Stock Lockscreen Colors">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Restore Stock Lockscreen Colors">
         <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
             android:icon="@drawable/restorecolour"
             android:summary="This action will restore LockScreen Items colors to Stock"

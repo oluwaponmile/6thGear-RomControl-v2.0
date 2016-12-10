@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:phronesis="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory android:title="Fix White Gallery">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Fix White Gallery">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:summary=""
             android:title="Fix White Gallery"
             phronesis:scriptFileName="gallerywhitefix.sh" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Fix Power Saving Mode">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="DPI Quick Fix">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:summary=""
-            android:title="Fix Power Saving Mode Issues"
+            android:title="Apply DPI Quick Fix"
             phronesis:packageNameToKill="com.sec.android.app.launcher"
             phronesis:scriptFileName="screen_density.sh" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Google Apps Toggle">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Google Apps Toggle">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:summary="Remove Google applications"
             android:title="Disable Google Apps"
@@ -26,7 +32,9 @@
             phronesis:rebootOptions="imminent"
             phronesis:scriptFileName="googleon.sh" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Netflix Control">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Netflix Control">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:summary="Enable Netflix - device will auto-reboot"
             android:title="Netflix ON"
@@ -38,7 +46,9 @@
             phronesis:rebootOptions="imminent"
             phronesis:scriptFileName="disnetlib.sh" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Apply Custom GPS Config">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Apply Custom GPS Config">
         <PreferenceScreen android:title="Apply custom gps configurations">
             <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
                 android:summary="5.1.1 variant"
@@ -78,7 +88,9 @@
                 phronesis:scriptFileName="gps_109.sh" />
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Change Device DPI (Applications might not scale correctly outside 420 and 480 DPIs).">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Change Device DPI (Applications might not scale correctly outside 420 and 480 DPIs).">
         <PreferenceScreen android:title="Change Device DPI Dynamically">
             <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
                 android:summary=""
@@ -112,7 +124,9 @@
                 phronesis:scriptFileName="dpi480.sh" />
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Restore Stock Colors ">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Restore Stock Colors ">
         <PreferenceScreen android:title="Restore Stock Colors">
             <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
                 android:summary="This action will do a global restore of all colors to Stock"
@@ -150,7 +164,9 @@
                 phronesis:valuesList="@array/restore_statusbar_colors_values" />
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Fix Viper4Android Profile Path">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Fix Viper4Android Profile Path">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:summary=""
             android:title="Fix Viper4Android Paths"

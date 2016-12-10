@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:phronesis="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory android:title="Customize Notification Background">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Customize Notification Background">
         <PreferenceScreen android:title="Notification Panel Background">
             <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                 android:defaultValue="false"
@@ -17,6 +19,7 @@
                 android:title="Enable custom background" />
             <PreferenceCategory
                 android:dependency="enable_gear_custom_bg"
+                android:layout="@layout/preferences_category"
                 android:title="General bg preferences">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference
                     android:defaultValue="0"
@@ -34,6 +37,7 @@
             </PreferenceCategory>
             <PreferenceCategory
                 android:dependency="enable_gear_custom_bg"
+                android:layout="@layout/preferences_category"
                 android:title="Custom image preferences">
                 <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
                     android:key="gear_bg_image_uri"
@@ -47,6 +51,7 @@
             </PreferenceCategory>
             <PreferenceCategory
                 android:dependency="enable_gear_custom_bg"
+                android:layout="@layout/preferences_category"
                 android:title="Color and gradient preferences">
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                     android:defaultValue="\#00000000"
@@ -68,7 +73,9 @@
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Customize Recent Panel Background">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Customize Recent Panel Background">
         <PreferenceScreen android:title="Recent Task Panel Background">
             <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                 android:key="matrix_anim"
@@ -133,6 +140,7 @@
                 android:title="Enable custom background" />
             <PreferenceCategory
                 android:dependency="recent_enable_gear_custom_bg"
+                android:layout="@layout/preferences_category"
                 android:title="General bg preferences">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference
                     android:defaultValue="0"
@@ -150,6 +158,7 @@
             </PreferenceCategory>
             <PreferenceCategory
                 android:dependency="recent_enable_gear_custom_bg"
+                android:layout="@layout/preferences_category"
                 android:title="Custom image preferences">
                 <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
                     android:key="recent_gear_bg_image_uri"
@@ -163,6 +172,7 @@
             </PreferenceCategory>
             <PreferenceCategory
                 android:dependency="recent_enable_gear_custom_bg"
+                android:layout="@layout/preferences_category"
                 android:title="Color and gradient preferences">
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                     android:defaultValue="\#00000000"
@@ -184,7 +194,9 @@
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Miscellaneous Notification Settings">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Miscellaneous Notification Settings">
         <PreferenceScreen android:title="Other Notification Settings">
             <com.wubydax.romcontrol.v2.prefs.FilePreference
                 android:defaultValue="true"
@@ -272,6 +284,7 @@
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory
+        android:layout="@layout/preferences_category"
         android:summary=""
         android:title="QuickLaunch Bar Cutomization">
         <PreferenceScreen
@@ -333,13 +346,19 @@
                 android:title="QuickLaunch background color" />
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Notification Pull Down Customization">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Notification Pull Down Customization">
         <PreferenceScreen android:title="Pull Down Customization">
-            <PreferenceCategory android:title="Clock Mod " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Clock Mod " />
             <PreferenceScreen
                 android:summary="Choose between stock and modded clock"
                 android:title="Clock Types &amp; Color">
-                <PreferenceCategory android:title="Mod Clock Global Switch" />
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Mod Clock Global Switch" />
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="0"
                     android:key="link_colors"
@@ -396,11 +415,21 @@
                         android:key="expand_header_icon_color"
                         android:summary="Set custom color"
                         android:title="Expanded header setting icon color" />
+                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                        android:defaultValue="\#ff325d84"
+                        android:dependency="link_colors"
+                        android:key="edit_color"
+                        android:summary="Choose text color"
+                        android:title="Edit text color" />
                 </PreferenceCategory>
             </PreferenceScreen>
-            <PreferenceCategory android:title="Pull Down Item &amp; Background Color " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Pull Down Item &amp; Background Color " />
             <PreferenceScreen android:title="Item and Background Colors">
-                <PreferenceCategory android:title="Pull Down Item Color">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Pull Down Item Color">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                         android:defaultValue="false"
                         android:key="main_switch_bg"
@@ -441,9 +470,13 @@
                         android:title="Data usage background" />
                 </PreferenceCategory>
             </PreferenceScreen>
-            <PreferenceCategory android:title="Quick Toggle ON/OFF Colors " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Quick Toggle ON/OFF Colors " />
             <PreferenceScreen android:title="Toggle ON/OFF Colors">
-                <PreferenceCategory android:title="Quick Toggle Color">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Quick Toggle Color">
                     <com.wubydax.romcontrol.v2.prefs.FilePreference
                         android:defaultValue="true"
                         android:key="modcfg_npanel_colors"
@@ -468,9 +501,12 @@
                         phronesis:packageNameToKill="com.android.systemui" />
                 </PreferenceCategory>
             </PreferenceScreen>
-            <PreferenceCategory android:title="Brightness Slider Color " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Brightness Slider Color " />
             <PreferenceScreen android:title="Set Brightness Slider Color ">
                 <PreferenceCategory
+                    android:layout="@layout/preferences_category"
                     android:summary="Customize brightness bar colors"
                     android:title="Brightness Panel Color">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
@@ -511,9 +547,12 @@
                         android:title="Brightness text label color" />
                 </PreferenceCategory>
             </PreferenceScreen>
-            <PreferenceCategory android:title="Data Usage View Customization " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Data Usage View Customization " />
             <PreferenceScreen android:title="Data Usage View Customization ">
                 <PreferenceCategory
+                    android:layout="@layout/preferences_category"
                     android:summary="Customize Data Usage Text &amp; Color"
                     android:title="Data Usage Customization">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
@@ -543,7 +582,9 @@
                         android:title="Data usage text style" />
                 </PreferenceCategory>
             </PreferenceScreen>
-            <PreferenceCategory android:title="Restore All Color To Stock " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Restore All Color To Stock " />
             <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
                 android:icon="@drawable/restorecolour"
                 android:summary="This action will restore Notification Pull Down colors to Stock"
@@ -554,7 +595,9 @@
                 phronesis:valuesList="@array/restore_notification_colors_values" />
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Notification Panel Shape &amp; Text + Color ">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Notification Panel Shape &amp; Text + Color ">
         <PreferenceScreen
             android:summary="Customize notification shapes &amp; color + text"
             android:title="Notification bg Shape &amp; Color">
@@ -580,7 +623,9 @@
                 android:dependency="custom_notification_color"
                 android:key="notification_bg_color"
                 android:title="Notification bg color" />
-            <PreferenceCategory android:title="Screenshot buttons bg Color">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Screenshot buttons bg Color">
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                     android:defaultValue="-1"
                     android:key="notification_bg_color_screenshot"
@@ -594,7 +639,9 @@
                 phronesis:packageNameToKill="com.android.systemui" />
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Device info on notification settings">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Device info on notification settings">
         <PreferenceScreen android:title="Device info customization">
             <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                 android:defaultValue="true"
@@ -604,6 +651,7 @@
                 android:title="Enable device info view" />
             <PreferenceCategory
                 android:dependency="device_info_visibility"
+                android:layout="@layout/preferences_category"
                 android:title="Text colors">
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                     android:defaultValue="\#ffffffff"
@@ -616,6 +664,7 @@
             </PreferenceCategory>
             <PreferenceCategory
                 android:dependency="device_info_visibility"
+                android:layout="@layout/preferences_category"
                 android:title="Device Info Items">
                 <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference
                     android:defaultValue="true"

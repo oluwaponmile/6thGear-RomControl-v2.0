@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:phronesis="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory android:title="InCall UI Background Mod" />
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="InCall UI Background Mod" />
     <PreferenceScreen android:title="Custom bg for IncallUI">
         <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
             android:defaultValue="false"
@@ -11,6 +13,7 @@
             android:title="Enable custom background" />
         <PreferenceCategory
             android:dependency="enable_gear_custom_bg1"
+            android:layout="@layout/preferences_category"
             android:title="General bg preferences">
             <com.wubydax.romcontrol.v2.prefs.MyListPreference
                 android:defaultValue="0"
@@ -28,6 +31,7 @@
         </PreferenceCategory>
         <PreferenceCategory
             android:dependency="enable_gear_custom_bg1"
+            android:layout="@layout/preferences_category"
             android:title="Custom image preferences">
             <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
                 android:key="gear_bg_image_uri1"
@@ -41,6 +45,7 @@
         </PreferenceCategory>
         <PreferenceCategory
             android:dependency="enable_gear_custom_bg1"
+            android:layout="@layout/preferences_category"
             android:title="Color and gradient preferences">
             <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                 android:defaultValue="\#00000000"
@@ -61,14 +66,18 @@
                 android:title="Gradient orientation" />
         </PreferenceCategory>
     </PreferenceScreen>
-    <PreferenceCategory android:title="Advanced Phone Settings">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Advanced Phone Settings">
         <PreferenceScreen
             android:summary="Enhanced setting, Power menu, Call settings &amp; Functions"
             android:title="Advanced Phone Features">
             <PreferenceScreen
                 android:summary="System enhancement options"
                 android:title="Enhanced Settings">
-                <PreferenceCategory android:title="Extra Mod Toggles" />
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Extra Mod Toggles" />
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="true"
                     android:key="phronesis_capture_screen_sound"
@@ -101,7 +110,9 @@
             <PreferenceScreen
                 android:summary="Customize the Power Menu Types and Items"
                 android:title="Advanced Power Menu">
-                <PreferenceCategory android:title="Advanced Power Menu Display Type">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Advanced Power Menu Display Type">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                         android:defaultValue="true"
                         android:key="phronesis_power_menu_mode"
@@ -110,7 +121,9 @@
                         android:summaryOn="MM Style Enabled"
                         android:title="Power Menu Style" />
                 </PreferenceCategory>
-                <PreferenceCategory android:title="Advanced Power Menu Options">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Advanced Power Menu Options">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                         android:defaultValue="true"
                         android:key="killprocess_power_menu_power"
@@ -193,7 +206,9 @@
             <PreferenceScreen
                 android:summary="Advanced telephony features. Call recording and other settings"
                 android:title="Advanced Call Settings">
-                <PreferenceCategory android:title="Advanced Call Settings">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Advanced Call Settings">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                         android:defaultValue="false"
                         android:key="auto_call_record_in"
@@ -218,7 +233,9 @@
             <PreferenceScreen
                 android:summary="Usb Setup. Hardware Test, IMEI"
                 android:title="Advanced Phone Diagnostic Menu">
-                <PreferenceCategory android:title="Phone Diagnotics Menu">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Phone Diagnotics Menu">
                     <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
                         android:summary="Testing menu and device information"
                         android:title="Phone Testing Menu"
@@ -247,7 +264,9 @@
             </PreferenceScreen>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Device PIN Quick Unlock Service">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Device PIN Quick Unlock Service">
         <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
             android:defaultValue="false"
             android:key="killprocess_quick_unlock"
@@ -256,7 +275,9 @@
             android:summaryOn="Enabled. ATTN: DO NOT USE WITH SIM PIN"
             android:title="Quick Unlock PIN" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Screen Wake With USB Plugged">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Screen Wake With USB Plugged">
         <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
             android:defaultValue="true"
             android:key="phronesis_usb_plugged"
@@ -264,7 +285,9 @@
             android:summaryOn="Screen On Enabled"
             android:title="USB Plug / Unplug Wake Screen" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Device Settings UI">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Device Settings UI">
         <PreferenceScreen
             android:summary="Customize device Settings UI"
             android:title="Device Settings UI">
@@ -317,11 +340,14 @@
                 android:title="Settings edit Favorites Title text size" />
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Animations and Transition Effects Settings">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Animations and Transition Effects Settings">
         <PreferenceScreen
             android:summary="IME, Launcher, Listview &amp; Toast Animation"
             android:title="Different Animation Categories">
             <PreferenceCategory
+                android:layout="@layout/preferences_category"
                 android:summary="Set Scrolling Animation"
                 android:title="Mokee Listview Animation">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference
@@ -339,11 +365,15 @@
                     android:key="listview_interpolator"
                     android:title="Listview interpolator" />
             </PreferenceCategory>
-            <PreferenceCategory android:title="Samsung Keyboard Animation" />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Samsung Keyboard Animation" />
             <PreferenceScreen
                 android:summary="Samsung Keyboard Animation"
                 android:title="IME KB Animations">
-                <PreferenceCategory android:title="Keyboard Animation">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Keyboard Animation">
                     <com.wubydax.romcontrol.v2.prefs.MyListPreference
                         android:defaultValue="0"
                         android:entries="@array/anim_open_controls_entries"
@@ -378,6 +408,7 @@
                 </PreferenceCategory>
             </PreferenceScreen>
             <PreferenceCategory
+                android:layout="@layout/preferences_category"
                 android:summary="System Toast Animation"
                 android:title="Toast Pop Up Notification Animations">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference
@@ -389,6 +420,7 @@
                     android:title="Toast Animations UI Framework " />
             </PreferenceCategory>
             <PreferenceCategory
+                android:layout="@layout/preferences_category"
                 android:summary="Launcher Animation"
                 android:title="Touchwiz Page Transition Effects">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference

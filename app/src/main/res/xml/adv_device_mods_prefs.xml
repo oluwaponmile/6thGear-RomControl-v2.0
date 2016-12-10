@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:phronesis="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory android:title="SystemUI Preference">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="SystemUI Preference">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:summary="Advanced SystemUI with many options"
             android:title="Advanced SystemUI"
@@ -14,7 +16,9 @@
             phronesis:scriptFileName="pstock.sh" />
     </PreferenceCategory>
     <PreferenceCategory android:title="---------------------------------------------------------------" />
-    <PreferenceCategory android:title="Home LongPress Support">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Home LongPress Support">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:title="Support Now On Tap"
             phronesis:rebootOptions="imminent"
@@ -25,7 +29,9 @@
             phronesis:scriptFileName="homelongpress_custom.sh" />
     </PreferenceCategory>
     <PreferenceCategory android:title="---------------------------------------------------------------" />
-    <PreferenceCategory android:title="Samsung Gallery Preference">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Samsung Gallery Preference">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:summary="Cloud sync with white gallery fix"
             android:title="Gallery With Sync"
@@ -38,7 +44,9 @@
             phronesis:scriptFileName="gallerywithoutsync.sh" />
     </PreferenceCategory>
     <PreferenceCategory android:title="---------------------------------------------------------------" />
-    <PreferenceCategory android:title="Launcher Preference">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Launcher Preference">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:title="Infinite Scrolling"
             phronesis:rebootOptions="imminent"
@@ -49,14 +57,18 @@
             phronesis:scriptFileName="launcher_stock.sh" />
     </PreferenceCategory>
     <PreferenceCategory android:title="---------------------------------------------------------------" />
-    <PreferenceCategory android:title="Statusbar IconThemer (Phone boots into recovery mode)">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Statusbar IconThemer (Phone boots into recovery mode)">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:summary="Reboot into recovery mode to flash IconThemer"
             android:title="Change Statusbar Icons"
             phronesis:scriptFileName="rebootrecovey.sh" />
     </PreferenceCategory>
     <PreferenceCategory android:title="---------------------------------------------------------------" />
-    <PreferenceCategory android:title="Left Softkey ShortPress">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Left Softkey ShortPress">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:summary="LongPress Customisable"
             android:title="Map to Recent Task"
@@ -69,7 +81,9 @@
             phronesis:scriptFileName="keymapmenu.sh" />
     </PreferenceCategory>
     <PreferenceCategory android:title="---------------------------------------------------------------" />
-    <PreferenceCategory android:title="Boot Animation Preference">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Boot Animation Preference">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:title="Phronesis Boot Animation"
             phronesis:scriptFileName="phronesisanimation_updated.sh" />
@@ -80,7 +94,9 @@
             android:title="White Animation"
             phronesis:scriptFileName="whiteanimation.sh" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Boot Sound">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Boot Sound">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:title="Disable Boot Sound"
             phronesis:scriptFileName="disbtsnds.sh" />
@@ -88,7 +104,9 @@
             android:title="Enable Boot Sound"
             phronesis:scriptFileName="enbtsnds.sh" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Volume slider Sound">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Volume slider Sound">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:title="Disable Volume Slider Sound"
             phronesis:packageNameToKill="com.android.systemui"
@@ -98,7 +116,9 @@
             phronesis:packageNameToKill="com.android.systemui"
             phronesis:scriptFileName="envolsnds.sh" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Battery Sound">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Battery Sound">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:title="Disable Low Battery Sound"
             phronesis:scriptFileName="dislowbatsnd.sh" />

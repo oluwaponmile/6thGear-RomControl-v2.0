@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:phronesis="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory android:title="Icon Alignments &amp; Visibility">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Icon Alignments &amp; Visibility">
         <PreferenceScreen android:title="Visibility and Alignments">
-            <PreferenceCategory android:title="Set Icon Visibility " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Set Icon Visibility " />
             <PreferenceScreen android:title="Volume + Bluetooth &amp; Alarm">
                 <PreferenceCategory android:title="Set Options">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
@@ -40,10 +44,16 @@
                         phronesis:packageNameToKill="com.android.systemui" />
                 </PreferenceCategory>
             </PreferenceScreen>
-            <PreferenceCategory android:title="StatusBar Clock &amp; Date Settings">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="StatusBar Clock &amp; Date Settings">
+                <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+                    android:title="Potato Clock Style"
+                    phronesis:componentName="com.potato.clock.main/com.potato.clock.main.Main" />
                 <PreferenceScreen
-                    android:summary="Customize statusbar clock &amp; date"
-                    android:title="Clock &amp; Date Options">
+                    android:icon="@drawable/customclock"
+                    android:summary=""
+                    android:title="Phronesis Clock Style">
                     <com.wubydax.romcontrol.v2.prefs.MyListPreference
                         android:defaultValue="0"
                         android:entries="@array/clock_style_entries"
@@ -99,7 +109,9 @@
                         android:title="Date Color" />
                 </PreferenceScreen>
             </PreferenceCategory>
-            <PreferenceCategory android:title="CPU Speed Info">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="CPU Speed Info">
                 <PreferenceScreen android:title="CPU Speed Info Display">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                         android:defaultValue="0"
@@ -113,8 +125,8 @@
                         android:key="cpu_location"
                         android:summaryOff="Shown on Left"
                         android:summaryOn="Shown on Right"
-                        phronesis:isSilent="false"
                         android:title="CPU Info Location"
+                        phronesis:isSilent="false"
                         phronesis:packageNameToKill="com.android.systemui" />
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                         android:defaultValue="0"
@@ -133,6 +145,7 @@
                 </PreferenceScreen>
             </PreferenceCategory>
             <PreferenceCategory
+                android:layout="@layout/preferences_category"
                 android:summary="Statusbar signal location"
                 android:title="Set statusbar signal position">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference
@@ -142,7 +155,9 @@
                     android:key="leftsignal"
                     android:title="Statusbar Signal Position" />
             </PreferenceCategory>
-            <PreferenceCategory android:title="Carrier &amp; Custom Text " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Carrier &amp; Custom Text " />
             <PreferenceScreen android:title="Carrier Text &amp; Color  ">
                 <PreferenceCategory
                     android:summary="Carrier text and color"
@@ -166,7 +181,9 @@
             </PreferenceScreen>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Immersive Mode">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Immersive Mode">
         <com.wubydax.romcontrol.v2.prefs.MyListPreference
             android:defaultValue="immersive.full"
             android:entries="@array/immersive_entries"
@@ -174,11 +191,15 @@
             android:key="policy_control"
             android:title="Immersive Mode (Fullscreen)" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Statusbar Icon Colors">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Statusbar Icon Colors">
         <PreferenceScreen
             android:summary="Set your custom colors here"
             android:title="Statusbar Icon Colors">
-            <PreferenceCategory android:title="StatusBar Icon Color Global Switch">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="StatusBar Icon Color Global Switch">
                 <com.wubydax.romcontrol.v2.prefs.FilePreference
                     android:defaultValue="true"
                     android:key="modcfg_statusbar_colors"
@@ -188,7 +209,9 @@
                     phronesis:isSilent="false"
                     phronesis:packageNameToKill="com.android.systemui" />
             </PreferenceCategory>
-            <PreferenceCategory android:title="StatusBar Icon Same Color Switch">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="StatusBar Icon Same Color Switch">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="false"
                     android:dependency="modcfg_statusbar_colors"
@@ -205,7 +228,9 @@
                     android:title="Statusbar Icon Same Color"
                     phronesis:packageNameToKill="com.android.systemui" />
             </PreferenceCategory>
-            <PreferenceCategory android:title="Individual Colors">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Individual Colors">
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                     android:defaultValue="-1"
                     android:key="statusbar_wifi_color"
@@ -220,8 +245,8 @@
                     android:defaultValue="-1"
                     android:key="statusbar_data_color"
                     android:summary="3G/4G/LTE data icon color"
-                    phronesis:packageNameToKill="com.android.systemui"
-                    android:title="Data Icon Color" />
+                    android:title="Data Icon Color"
+                    phronesis:packageNameToKill="com.android.systemui" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                     android:defaultValue="-1"
                     android:key="statusbar_icon_color"
@@ -231,11 +256,17 @@
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Battery Display">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Battery Display">
         <PreferenceScreen android:title="3Minit &amp; Battery Bar Options">
-            <PreferenceCategory android:title="3Minit &amp; Stock Battery Options " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="3Minit &amp; Stock Battery Options " />
             <PreferenceScreen android:title="Set Battery Options">
-                <PreferenceCategory android:title="Stock &amp; 3Minit Options ">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Stock &amp; 3Minit Options ">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                         android:defaultValue="0"
                         android:key="display_battery_percentage"
@@ -264,9 +295,12 @@
                         phronesis:componentName="com.three.minit.minitbatterysettings.free/com.three.minit.minitbatterysettings.MainActivity" />
                 </PreferenceCategory>
             </PreferenceScreen>
-            <PreferenceCategory android:title="Battery Bar " />
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Battery Bar " />
             <PreferenceScreen android:title="Linear Battery Display ">
                 <PreferenceCategory
+                    android:layout="@layout/preferences_category"
                     android:summary="Linear battery options"
                     android:title="BatteryBar Visibility">
                     <com.wubydax.romcontrol.v2.prefs.MyListPreference
@@ -307,11 +341,17 @@
             </PreferenceScreen>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Network Speed Display">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Network Speed Display">
         <PreferenceScreen android:title="Speed Display &amp; Location Options">
-            <PreferenceCategory android:title="Left Network Traffic Speed Display">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Left Network Traffic Speed Display">
                 <PreferenceScreen android:title="Leftside Display Option">
-                    <PreferenceCategory android:title="Network data">
+                    <PreferenceCategory
+                        android:layout="@layout/preferences_category"
+                        android:title="Network data">
                         <com.wubydax.romcontrol.v2.prefs.MyListPreference
                             android:defaultValue="0"
                             android:entries="@array/traffic_state_items"
@@ -385,20 +425,20 @@
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:key="network_traffic1_color"
-                            phronesis:packageNameToKill="com.android.systemui"
-                            android:title="Global color" />
+                            android:title="Global color"
+                            phronesis:packageNameToKill="com.android.systemui" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:dependency="network_traffic1_global_color"
                             android:key="network_traffic1_upload_color"
-                            phronesis:packageNameToKill="com.android.systemui"
-                            android:title="Upload text color" />
+                            android:title="Upload text color"
+                            phronesis:packageNameToKill="com.android.systemui" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:dependency="network_traffic1_global_color"
                             android:key="network_traffic1_download_color"
-                            phronesis:packageNameToKill="com.android.systemui"
-                            android:title="Download text color" />
+                            android:title="Download text color"
+                            phronesis:packageNameToKill="com.android.systemui" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:dependency="network_traffic1_global_color"
@@ -408,7 +448,9 @@
                     </PreferenceCategory>
                 </PreferenceScreen>
             </PreferenceCategory>
-            <PreferenceCategory android:title="Right Network Traffic Speed Display">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Right Network Traffic Speed Display">
                 <PreferenceScreen android:title="Rightside Display Option">
                     <PreferenceCategory android:title="Network data">
                         <com.wubydax.romcontrol.v2.prefs.MyListPreference
@@ -480,19 +522,19 @@
                             android:key="network_traffic_global_color"
                             android:summaryOff="Global color will apply to all elements"
                             android:summaryOn="All elements can be colored separately"
-                            phronesis:packageNameToKill="com.android.systemui"
-                            android:title="Separate colors for elements" />
+                            android:title="Separate colors for elements"
+                            phronesis:packageNameToKill="com.android.systemui" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:key="network_traffic_color"
-                            phronesis:packageNameToKill="com.android.systemui"
-                            android:title="Global color" />
+                            android:title="Global color"
+                            phronesis:packageNameToKill="com.android.systemui" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:dependency="network_traffic_global_color"
                             android:key="network_traffic_upload_color"
-                            phronesis:packageNameToKill="com.android.systemui"
-                            android:title="Upload text color" />
+                            android:title="Upload text color"
+                            phronesis:packageNameToKill="com.android.systemui" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:dependency="network_traffic_global_color"
@@ -509,7 +551,9 @@
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Reset StatusBar Icon to Stock">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Reset StatusBar Icon to Stock">
         <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
             android:icon="@drawable/restorecolour"
             android:summary="This action will restore Statusbar colors to Stock"

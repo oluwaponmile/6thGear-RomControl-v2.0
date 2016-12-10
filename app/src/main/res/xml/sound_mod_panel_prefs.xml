@@ -20,7 +20,9 @@
     <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
         android:title="Samsung Soundalive"
         phronesis:componentName="com.sec.android.app.soundalive/com.sec.android.app.soundalive.SAControlPanelActivity" />
-    <PreferenceCategory android:title="Screen Off Music Control" />
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Screen Off Music Control" />
     <PreferenceScreen
         android:icon="@drawable/music_control"
         android:summary="@string/volbtn_music_controls_summary"
@@ -51,7 +53,9 @@
             android:key="volbtn_vol_down"
             android:title="@string/volbtn_vol_down_title" />
     </PreferenceScreen>
-    <PreferenceCategory android:title="Loud Volume Warning Toggle" />
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Loud Volume Warning Toggle" />
     <PreferenceScreen
         android:icon="@drawable/volumewarning"
         android:summary="Loud Volume Warning Toggle"
