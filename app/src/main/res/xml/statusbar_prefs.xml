@@ -220,6 +220,7 @@
                     android:defaultValue="-1"
                     android:key="statusbar_data_color"
                     android:summary="3G/4G/LTE data icon color"
+                    phronesis:packageNameToKill="com.android.systemui"
                     android:title="Data Icon Color" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                     android:defaultValue="-1"
@@ -384,16 +385,19 @@
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:key="network_traffic1_color"
+                            phronesis:packageNameToKill="com.android.systemui"
                             android:title="Global color" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:dependency="network_traffic1_global_color"
                             android:key="network_traffic1_upload_color"
+                            phronesis:packageNameToKill="com.android.systemui"
                             android:title="Upload text color" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:dependency="network_traffic1_global_color"
                             android:key="network_traffic1_download_color"
+                            phronesis:packageNameToKill="com.android.systemui"
                             android:title="Download text color" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
@@ -476,15 +480,18 @@
                             android:key="network_traffic_global_color"
                             android:summaryOff="Global color will apply to all elements"
                             android:summaryOn="All elements can be colored separately"
+                            phronesis:packageNameToKill="com.android.systemui"
                             android:title="Separate colors for elements" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:key="network_traffic_color"
+                            phronesis:packageNameToKill="com.android.systemui"
                             android:title="Global color" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"
                             android:dependency="network_traffic_global_color"
                             android:key="network_traffic_upload_color"
+                            phronesis:packageNameToKill="com.android.systemui"
                             android:title="Upload text color" />
                         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                             android:defaultValue="\#ffffff"

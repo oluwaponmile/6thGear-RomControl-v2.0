@@ -1689,13 +1689,11 @@
         <item>1 Columns</item>
         <item>2 Columns</item>
         <item>3 Columns</item>
-        <item>4 Columns</item>
     </string-array>
     <string-array name="dashboard_fav_columns_values">
         <item>1</item>
         <item>2</item>
         <item>3</item>
-        <item>4</item>
     </string-array>
     <string-array name="dashboard_cat_columns_entries">
         <item>1 Columns</item>
