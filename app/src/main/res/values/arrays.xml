@@ -412,7 +412,7 @@
         <item>Choco Cooky</item>
         <item>Cutive Mono</item>
         <item>Cool Jazz</item>
-        <item>Rosemary</item>
+        <item>Scar</item>
         <item>Ultima</item>
     </string-array>
     <string-array name="lockscreen_font_style_values">
@@ -1798,13 +1798,17 @@
         <item>1</item>
     </string-array>
     <string-array name="swipe_finger_point_entries">
+        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
+        <item>Disbale</item>
     </string-array>
     <string-array name="swipe_finger_point_values">
+        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
+        <item>0</item>
     </string-array>
 </resources>
