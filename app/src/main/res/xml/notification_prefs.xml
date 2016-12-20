@@ -549,6 +549,64 @@
             </PreferenceScreen>
             <PreferenceCategory
                 android:layout="@layout/preferences_category"
+                android:title="Pulldown Quickstyle Selection">
+                <PreferenceScreen android:title="Pulldown Quickstyle Customization">
+                    <PreferenceCategory
+                        android:layout="@layout/preferences_category"
+                        android:title="Pulldown Quickstyle Type">
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="0"
+                            android:entries="@array/ListViewKeyName"
+                            android:entryValues="@array/ListViewKeyValue"
+                            android:key="phronesis_eight_key"
+                            android:title="Pulldown Quickstyle" />
+                    </PreferenceCategory>
+                    <PreferenceCategory
+                        android:layout="@layout/preferences_category"
+                        android:title="QuickLaunch App Customization">
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                            android:defaultValue="true"
+                            android:key="quick_launch_show_add"
+                            android:summaryOff="Hidden"
+                            android:summaryOn="Shown"
+                            android:title="QuickLauncher Add App Button"
+                            phronesis:isSilent="false"
+                            phronesis:packageNameToKill="com.android.systemui" />
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                            android:defaultValue="false"
+                            android:key="quick_launch_text_visible"
+                            android:summaryOff="Hidden"
+                            android:summaryOn="Shown"
+                            android:title="QuickLauncher Text"
+                            phronesis:isSilent="false"
+                            phronesis:packageNameToKill="com.android.systemui" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="\#ff325d84"
+                            android:key="quick_launch_text_color"
+                            android:summary="Choose color"
+                            android:title="QuickLaunch text Color"
+                            phronesis:isSilent="false"
+                            phronesis:packageNameToKill="com.android.systemui" />
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="5"
+                            android:entries="@array/StatusAppListColumnName"
+                            android:entryValues="@array/StatusAppListColumnValue"
+                            android:key="quick_launch_vis_buttons"
+                            android:title="Number of Quickbuttons shown"
+                            phronesis:isSilent="false"
+                            phronesis:packageNameToKill="com.android.systemui" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="\#00000000"
+                            android:key="quick_launch_background_color"
+                            android:summary="Choose color"
+                            android:title="QuickLaunch background color"
+                            phronesis:isSilent="false"
+                            phronesis:packageNameToKill="com.android.systemui" />
+                    </PreferenceCategory>
+                </PreferenceScreen>
+            </PreferenceCategory>
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
                 android:title="Data Usage View Customization " />
             <PreferenceScreen android:title="Data Usage View Customization ">
                 <PreferenceCategory

@@ -1811,4 +1811,16 @@
         <item>4</item>
         <item>0</item>
     </string-array>
+    <string-array name="ListViewKeyName">
+        <item>Stock</item>
+        <item>8 Buttons Style</item>
+        <item>6 Buttons Style</item>
+        <item>QuickLaunch</item>
+    </string-array>
+    <string-array name="ListViewKeyValue">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 </resources>
