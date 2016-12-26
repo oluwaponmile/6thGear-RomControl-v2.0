@@ -144,6 +144,12 @@
                     android:entryValues="@array/lockscreen_font_style_values"
                     android:key="lockscreen_clock_font_style"
                     android:title="Lockscreen Clock Font Style" />
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                    android:defaultValue="0"
+                    android:key="lock_seconds"
+                    android:summaryOff="Hidden"
+                    android:summaryOn="Shown"
+                    android:title="Show Seconds" />
             </PreferenceCategory>
             <PreferenceCategory
                 android:layout="@layout/preferences_category"
@@ -192,12 +198,6 @@
                     android:key="kg_date_color"
                     android:summary="Choose a color"
                     android:title="Date Color" />
-                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-                    android:defaultValue="0"
-                    android:key="lock_seconds"
-                    android:summaryOff="Hidden"
-                    android:summaryOn="Shown"
-                    android:title="Show Seconds" />
             </PreferenceCategory>
             <PreferenceCategory
                 android:layout="@layout/preferences_category"

@@ -275,12 +275,13 @@
                 android:key="pekaka_memCleanView"
                 android:summaryOff="Memory clean button is hidden"
                 android:summaryOn="Memory clean button is shown"
-                android:title="Memory cleaner" />
+                android:title="Memory Cleaner" />
             <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                 android:defaultValue="\#ff0b74d9"
                 android:dialogTitle="Customer color"
                 android:key="db_inkeffect_pekaka_memkiller_picker"
-                android:title="Memory cleaner Color" />
+                android:dependency="pekaka_memCleanView"
+                android:title="Memory Cleaner Color" />
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory
@@ -675,7 +676,7 @@
                 android:key="custom_notification_color"
                 android:summaryOff="Custom colors disabled"
                 android:summaryOn="Custom colors enabled"
-                android:title="Custom notification Colors Switch" />
+                android:title="Notification Bg. Color Switch" />
             <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                 android:defaultValue="0"
                 android:dependency="custom_notification_color"

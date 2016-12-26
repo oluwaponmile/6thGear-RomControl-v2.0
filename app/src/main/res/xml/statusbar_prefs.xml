@@ -285,7 +285,7 @@
                         android:summaryOn="Stock Battery shown"
                         android:title="Show/Hide Stock Battery" />
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-                        android:defaultValue="true"
+                        android:defaultValue="false"
                         android:key="minit_battery_visible"
                         android:summaryOff="3Minit Battery is hidden"
                         android:summaryOn="3Minit Battery shown"
