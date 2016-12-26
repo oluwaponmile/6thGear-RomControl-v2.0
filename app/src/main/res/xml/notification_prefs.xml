@@ -277,7 +277,7 @@
                 android:summaryOn="Memory clean button is shown"
                 android:title="Memory Cleaner" />
             <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                android:defaultValue="\#ff0b74d92"
+                android:defaultValue="\#ff0b74d9"
                 android:dialogTitle="Customer color"
                 android:key="db_inkeffect_pekaka_memkiller_picker"
                 android:dependency="pekaka_memCleanView"
