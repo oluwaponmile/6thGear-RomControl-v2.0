@@ -4,126 +4,244 @@
     <PreferenceCategory
         android:layout="@layout/preferences_category"
         android:title="SystemUI Preference">
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:summary="Advanced SystemUI with many options"
-            android:title="Advanced SystemUI"
-            phronesis:rebootOptions="imminent"
-            phronesis:scriptFileName="sysuiadvenced.sh" />
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:summary="Not a single mod"
-            android:title="Pure Stock SystemUI"
-            phronesis:rebootOptions="imminent"
-            phronesis:scriptFileName="pstock.sh" />
+        <PreferenceScreen android:title="SystemUI Preference">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Advanced SystemUI with many options"
+                android:title="Advanced SystemUI"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="sysuiadvenced.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Not a single mod"
+                android:title="Pure Stock SystemUI"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="pstock.sh" />
+        </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="---------------------------------------------------------------" />
     <PreferenceCategory
         android:layout="@layout/preferences_category"
         android:title="Home LongPress Support">
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Support Now On Tap"
-            phronesis:rebootOptions="imminent"
-            phronesis:scriptFileName="homelongpress_gnot.sh" />
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Custom Action Support"
-            phronesis:rebootOptions="imminent"
-            phronesis:scriptFileName="homelongpress_custom.sh" />
+        <PreferenceScreen android:title="Home LongPress Support">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Support Now On Tap"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="homelongpress_gnot.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Custom Action Support"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="homelongpress_custom.sh" />
+        </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="---------------------------------------------------------------" />
     <PreferenceCategory
         android:layout="@layout/preferences_category"
         android:title="Samsung Gallery Preference">
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:summary="Cloud sync with white gallery fix"
-            android:title="Gallery With Sync"
-            phronesis:rebootOptions="imminent"
-            phronesis:scriptFileName="gallerywithsync.sh" />
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:summary="No sync feature"
-            android:title="Gallery Without Sync"
-            phronesis:rebootOptions="imminent"
-            phronesis:scriptFileName="gallerywithoutsync.sh" />
+        <PreferenceScreen android:title="Samsung Gallery Preference">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Cloud sync with white gallery fix"
+                android:title="Gallery With Sync"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="gallerywithsync.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="No sync feature"
+                android:title="Gallery Without Sync"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="gallerywithoutsync.sh" />
+        </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="---------------------------------------------------------------" />
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Smart Manager Preference">
+        <PreferenceScreen android:title="Smart Manager Preference">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Install N7 Device Manager"
+                android:title="N7 Smart Manager"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="n7-smartmanager.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Install N7 and C9 Pro Smart Manager "
+                android:title="N7 and C9 Pro Smart Manager Combo"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="c9n7-smartmanager.sh" />
+        </PreferenceScreen>
+    </PreferenceCategory>
     <PreferenceCategory
         android:layout="@layout/preferences_category"
         android:title="Launcher Preference">
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Infinite Scrolling"
-            phronesis:rebootOptions="imminent"
-            phronesis:scriptFileName="launcher_infinite.sh" />
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Stock Launcher"
-            phronesis:rebootOptions="imminent"
-            phronesis:scriptFileName="launcher_stock.sh" />
+        <PreferenceScreen android:title="Launcher Preference">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Infinite Scrolling"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="launcher_infinite.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Stock Launcher"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="launcher_stock.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="App data will be wiped"
+                android:title="S8 Launcher"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="launcher_s8.sh" />
+        </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="---------------------------------------------------------------" />
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Weather Preference">
+        <PreferenceScreen android:title="Weather Type Preference">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="N7 Weather App"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="n7weather.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Support 5x1 and 2x1 widget"
+                android:title="S8 Weather App"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="s8weather.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Refresh weather widget before use. No horizontal 5x1 widget support"
+                android:title="S8 Weather With Lockscreen Weather"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="s8weather_lockweather.sh" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Spen AirCommand Shortcut Option">
+        <PreferenceScreen android:title="Spen AirCommand Shortcut Option">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="AirCommand with 10 Shortcuts"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="10shortcut.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary=""
+                android:title="AirCommand With Action Memo"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="actionmemo.sh" />
+        </PreferenceScreen>
+    </PreferenceCategory>
     <PreferenceCategory
         android:layout="@layout/preferences_category"
         android:title="Statusbar IconThemer (Phone boots into recovery mode)">
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:summary="Reboot into recovery mode to flash IconThemer"
-            android:title="Change Statusbar Icons"
-            phronesis:scriptFileName="rebootrecovey.sh" />
+        <PreferenceScreen android:title="Statusbar IconThemer">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Reboot into recovery mode to flash IconThemer"
+                android:title="Change Statusbar Icons"
+                phronesis:scriptFileName="rebootrecovey.sh" />
+        </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="---------------------------------------------------------------" />
     <PreferenceCategory
         android:layout="@layout/preferences_category"
         android:title="Left Softkey ShortPress">
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:summary="LongPress Customisable"
-            android:title="Map to Recent Task"
-            phronesis:rebootOptions="imminent"
-            phronesis:scriptFileName="keymaprecent.sh" />
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:summary="LongPress bound to SFinder"
-            android:title="Map to Menu"
-            phronesis:rebootOptions="imminent"
-            phronesis:scriptFileName="keymapmenu.sh" />
+        <PreferenceScreen android:title="Left Softkey ShortPress">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="LongPress Customisable"
+                android:title="Map to Recent Task"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="keymaprecent.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="LongPress bound to SFinder"
+                android:title="Map to Menu"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="keymapmenu.sh" />
+        </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:title="---------------------------------------------------------------" />
     <PreferenceCategory
         android:layout="@layout/preferences_category"
         android:title="Boot Animation Preference">
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Phronesis Boot Animation"
-            phronesis:scriptFileName="phronesisanimation_updated.sh" />
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Black Animation"
-            phronesis:scriptFileName="blackanimation.sh" />
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="White Animation"
-            phronesis:scriptFileName="whiteanimation.sh" />
+        <PreferenceScreen android:title="Boot Animation Preference">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Phronesis Boot Animation"
+                phronesis:scriptFileName="phronesisanimation_updated.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Black Animation"
+                phronesis:scriptFileName="blackanimation.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="White Animation"
+                phronesis:scriptFileName="whiteanimation.sh" />
+        </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory
         android:layout="@layout/preferences_category"
         android:title="Boot Sound">
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Disable Boot Sound"
-            phronesis:scriptFileName="disbtsnds.sh" />
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Enable Boot Sound"
-            phronesis:scriptFileName="enbtsnds.sh" />
+        <PreferenceScreen android:title="Device Notification Sound">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Disable Boot Sound"
+                phronesis:scriptFileName="disbtsnds.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Enable Boot Sound"
+                phronesis:scriptFileName="enbtsnds.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Disable Volume Slider Sound"
+                phronesis:packageNameToKill="com.android.systemui"
+                phronesis:scriptFileName="disvolsnds.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Enable Volume Slider Sound"
+                phronesis:packageNameToKill="com.android.systemui"
+                phronesis:scriptFileName="envolsnds.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Disable Low Battery Sound"
+                phronesis:scriptFileName="dislowbatsnd.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:title="Enable Low Battery Sound"
+                phronesis:scriptFileName="enlowbatsnd.sh" />
+        </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory
         android:layout="@layout/preferences_category"
-        android:title="Volume slider Sound">
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Disable Volume Slider Sound"
-            phronesis:packageNameToKill="com.android.systemui"
-            phronesis:scriptFileName="disvolsnds.sh" />
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Enable Volume Slider Sound"
-            phronesis:packageNameToKill="com.android.systemui"
-            phronesis:scriptFileName="envolsnds.sh" />
+        android:title="Advanced Scripting and Kernel Function">
+        <PreferenceScreen android:title="Advanced Scripting and Kernel Function">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Enable fast charging"
+                android:title="Enable Fast Charge"
+                phronesis:scriptFileName="fastcharge-enable.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Disable fast charging"
+                android:title="Disable Fast Charge"
+                phronesis:scriptFileName="fastcharge-disable.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Enable zzmoove gov."
+                android:title="Enable zzmoove Governor"
+                phronesis:scriptFileName="zzmoove-enable.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Enable zzmoove Gov."
+                android:title="Reset To Default Phantom Governor"
+                phronesis:scriptFileName="zzmoove-disable.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Enable OS swap support"
+                android:title="Enable Swap Support"
+                phronesis:scriptFileName="swapon.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Disable OS swap support"
+                android:title="Disable Swap Support"
+                phronesis:scriptFileName="swapoff.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Enable android log for debugging"
+                android:title="Enable Log Capturing"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="log-enable.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Disable log capturing"
+                android:title="Disable Log Capturing"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="log-disable.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="For Safetynet success"
+                android:title="Magisk Safetynet Patch"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="magisksafetynet.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Disable safetynet success check"
+                android:title="Remove Magisk Safetynet Patch"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="magisksafetynet-remove.sh" />
+        </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory
         android:layout="@layout/preferences_category"
-        android:title="Battery Sound">
+        android:title="Rom Debloater">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Disable Low Battery Sound"
-            phronesis:scriptFileName="dislowbatsnd.sh" />
-        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-            android:title="Enable Low Battery Sound"
-            phronesis:scriptFileName="enlowbatsnd.sh" />
+            android:summary="Remember that with great power comes great responsibility. So use with caution."
+            android:title="Debloat Your Rom"
+            phronesis:rebootOptions="imminent"
+            phronesis:scriptFileName="debloater.sh" />
     </PreferenceCategory>
 </PreferenceScreen>

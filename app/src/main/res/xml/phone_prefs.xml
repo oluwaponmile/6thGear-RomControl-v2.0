@@ -48,12 +48,12 @@
             android:layout="@layout/preferences_category"
             android:title="Color and gradient preferences">
             <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                android:defaultValue="\#00000000"
+                android:defaultValue="0"
                 android:dependency="gear_custom_bg_type1"
                 android:key="gear_bg_primary_color1"
                 android:title="Select primary color" />
             <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                android:defaultValue="\#00000000"
+                android:defaultValue="0"
                 android:dependency="gear_custom_bg_type1"
                 android:key="gear_second_gradient_color1"
                 android:title="Secondary Color (for gradient)" />
@@ -123,7 +123,87 @@
                 </PreferenceCategory>
                 <PreferenceCategory
                     android:layout="@layout/preferences_category"
-                    android:title="Advanced Power Menu Options">
+                    android:summary="Customized power menu text"
+                    android:title="Power Menu Custom Color Text">
+                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                        android:defaultValue="-1"
+                        android:key="primary_power_text_color"
+                        android:summary="Select the main color of the text"
+                        android:title="primary power text color" />
+                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                        android:defaultValue="-1"
+                        android:key="status_power_text_color"
+                        android:summary="Choose the color of the status text"
+                        android:title="status power text color" />
+                </PreferenceCategory>
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Power Menu Background Options " />
+                <PreferenceScreen android:title="Custom bg for Power Menu. MM Style Only">
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                        android:defaultValue="false"
+                        android:key="enable_gear_custom_bg_power"
+                        android:summaryOff="Disabled"
+                        android:summaryOn="Enabled"
+                        android:title="Enable custom background" />
+                    <PreferenceCategory
+                        android:dependency="enable_gear_custom_bg_power"
+                        android:layout="@layout/preferences_category"
+                        android:title="General bg preferences">
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="0"
+                            android:entries="@array/custom_bg_type_entries"
+                            android:entryValues="@array/custom_bg_type_values"
+                            android:key="gear_custom_bg_type_power"
+                            android:title="Background type"
+                            phronesis:dependentValue="0" />
+                        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                            android:defaultValue="255"
+                            android:key="gear_bg_opacity_power"
+                            android:title="Background opacity"
+                            phronesis:maxValue="255"
+                            phronesis:minValue="0" />
+                    </PreferenceCategory>
+                    <PreferenceCategory
+                        android:dependency="enable_gear_custom_bg_power"
+                        android:layout="@layout/preferences_category"
+                        android:title="Custom image preferences">
+                        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
+                            android:key="gear_bg_image_uri_power"
+                            android:title="Select Bg image" />
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="0"
+                            android:entries="@array/crop_entries"
+                            android:entryValues="@array/crop_values"
+                            android:key="gear_bg_crop_type_power"
+                            android:title="Set Image Scaling Type" />
+                    </PreferenceCategory>
+                    <PreferenceCategory
+                        android:dependency="enable_gear_custom_bg_power"
+                        android:layout="@layout/preferences_category"
+                        android:title="Color and gradient preferences">
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="0"
+                            android:dependency="gear_custom_bg_type_power"
+                            android:key="gear_bg_primary_color_power"
+                            android:title="Select primary color" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                            android:defaultValue="0"
+                            android:dependency="gear_custom_bg_type_power"
+                            android:key="gear_second_gradient_color_power"
+                            android:title="Secondary Color (for gradient)" />
+                        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                            android:defaultValue="0"
+                            android:dependency="gear_custom_bg_type_power"
+                            android:entries="@array/gradient_entries"
+                            android:entryValues="@array/gradient_values"
+                            android:key="gear_bg_gradient_orientation1"
+                            android:title="Gradient orientation" />
+                    </PreferenceCategory>
+                </PreferenceScreen>
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Advanced Power Menu Items">
                     <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                         android:defaultValue="true"
                         android:key="killprocess_power_menu_power"
@@ -230,6 +310,47 @@
                         android:title="Call screen return time duration" />
                 </PreferenceCategory>
             </PreferenceScreen>
+            <PreferenceScreen android:title="Charging Animation">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Charging Animation with Color">
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                        android:defaultValue="true"
+                        android:key="b_mostrar_anim_carga"
+                        android:summaryOff="Disabled"
+                        android:summaryOn="Enabled"
+                        android:title="Charger Connect Animation" />
+                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                        android:defaultValue="0xffffffff"
+                        android:dependency="b_mostrar_anim_carga"
+                        android:key="b_color_anim_carga"
+                        android:title="Animation Color"
+                        phronesis:isSilent="false"
+                        phronesis:packageNameToKill="com.android.systemui" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:summary="Set Low &amp; Critical Battery Warnings"
+                android:title="Low Battery Warning">
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Set Low Battery Warning Percent">
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:defaultValue="10"
+                        android:entries="@array/lowbattpercentage_entries"
+                        android:entryValues="@array/lowbattpercentage_values"
+                        android:key="low_battery_warning_percentage"
+                        android:title="Low Battery Warning Percent"
+                        phronesis:rebootDevice="true" />
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:defaultValue="3"
+                        android:entries="@array/critbattpercentage_entries"
+                        android:entryValues="@array/critbattpercentage_values"
+                        android:key="critical_battery_warning_percentage"
+                        android:title="Critical Battery Warning Percent"
+                        phronesis:rebootDevice="true" />
+                </PreferenceCategory>
+            </PreferenceScreen>
             <PreferenceScreen
                 android:summary="Usb Setup. Hardware Test, IMEI"
                 android:title="Advanced Phone Diagnostic Menu">
@@ -315,24 +436,18 @@
                 android:summaryOn="Hidden"
                 android:title="Hide QuickSettings Favorites" />
             <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
-                min="5"
-                unitsRight="dp"
                 android:defaultValue="16"
                 android:key="dash_title_text"
                 android:max="25"
                 android:summary="Adjust Settings dashboard Title text size"
                 android:title="Settings dashboard Title text size" />
             <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
-                min="5"
-                unitsRight="dp"
                 android:defaultValue="14"
                 android:key="dash_fav_title_text"
                 android:max="25"
                 android:summary="Adjust Settings Favorites Title text size"
                 android:title="Settings Favorites Title text size" />
             <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
-                min="5"
-                unitsRight="dp"
                 android:defaultValue="14"
                 android:key="dash_edit_fav_title_text"
                 android:max="25"
@@ -396,10 +511,6 @@
                         android:summary="%s"
                         android:title=" Custom Animation" />
                     <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
-                        interval="1"
-                        minimum="0"
-                        unitsLeft=""
-                        unitsRight=" * 15ms"
                         android:defaultValue="10"
                         android:key="animation_ime_duration"
                         android:max="100"
@@ -431,6 +542,27 @@
                     android:title="Touchwiz Page Effect"
                     phronesis:packageNameToKill="com.sec.android.app.launcher" />
             </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:summary="Call &amp; key press feedback vibration level"
+        android:title="Device Feedback Vibration Level">
+        <PreferenceScreen
+            android:summary="Call &amp; key press feedback vibration level"
+            android:title="Device Feedback Vibrations Level">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="5"
+                android:entries="@array/vibration_feedback_entries"
+                android:entryValues="@array/vibration_feedback_values"
+                android:key="VIB_FEEDBACK_MAGNITUDE"
+                android:title="Key Press Vibration Level" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="5"
+                android:entries="@array/vibration_feedback_entries"
+                android:entryValues="@array/vibration_feedback_values"
+                android:key="VIB_RECVCALL_MAGNITUDE"
+                android:title="Call Vibration Level" />
         </PreferenceScreen>
     </PreferenceCategory>
 </PreferenceScreen>

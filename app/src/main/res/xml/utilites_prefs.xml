@@ -3,6 +3,20 @@
     xmlns:phronesis="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory
         android:layout="@layout/preferences_category"
+        android:title="Digital Right Management">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary="Fix DRM apps. E.g. Amazon Video"
+            android:title="Fix DRM Apps"
+            phronesis:rebootOptions="imminent"
+            phronesis:scriptFileName="drm.sh" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary="Remove DRM fix"
+            android:title="Reverse DRM Fix"
+            phronesis:rebootOptions="imminent"
+            phronesis:scriptFileName="original.sh" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
         android:title="Fix White Gallery">
         <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
             android:summary=""

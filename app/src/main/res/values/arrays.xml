@@ -1823,4 +1823,139 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+    <string-array name="volpanel_timeout_entries">
+        <item>1000ms</item>
+        <item>1500ms</item>
+        <item>2000ms</item>
+        <item>2500ms</item>
+        <item>3000ms</item>
+        <item>3500ms</item>
+        <item>4000ms</item>
+        <item>4500ms</item>
+        <item>5000ms (Stock)</item>
+    </string-array>
+    <string-array name="volpanel_timeout_values">
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>2500</item>
+        <item>3000</item>
+        <item>3500</item>
+        <item>4000</item>
+        <item>4500</item>
+        <item>5000</item>
+    </string-array>
+    <string-array name="volpanel_timeout_pulsar_entries">
+        <item>1000ms</item>
+        <item>1500ms</item>
+        <item>2000ms</item>
+        <item>2500ms</item>
+        <item>3000ms (Stock)</item>
+        <item>3500ms</item>
+        <item>4000ms</item>
+        <item>4500ms</item>
+        <item>5000ms</item>
+    </string-array>
+    <string-array name="restore_volumepanel_colors_titles">
+        <item>Volume Panel Background</item>
+        <item>Volume Panel Text</item>
+        <item>Volume Panel Icons</item>
+        <item>Volume Panel Thumb</item>
+        <item>Volume Progress bar Background</item>
+        <item>Volume Progress bar Foreground</item>
+    </string-array>
+    <string-array name="restore_volumepanel_colors_keys">
+        <item>volume_panel_color</item>
+        <item>volume_title_color</item>
+        <item>volume_icon_color</item>
+        <item>volume_thumb_color</item>
+        <item>volume_progress_bar_bg_color</item>
+        <item>volume_progress_bar_color</item>
+    </string-array>
+    <integer-array name="restore_volumepanel_colors_values">
+        <item>-328966</item>
+        <item>-14606047</item>
+        <item>-6381922</item>
+        <item>-11549705</item>
+        <item>-2039584</item>
+        <item>-11549705</item>
+    </integer-array>
+    <string-array name="toggle_grace_entries">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="toggle_grace_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="vibration_feedback_entries">
+        <item>Disable vibration</item>
+        <item>Level 1</item>
+        <item>Level 2</item>
+        <item>Level 3</item>
+        <item>Level 4</item>
+        <item>Level 5</item>
+    </string-array>
+    <string-array name="vibration_feedback_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="restore_smusic_colors_keys">
+        <item>artist_noti_text</item>
+        <item>smusic_noti_text</item>
+        <item>prev_icon</item>
+        <item>play_pause_icon</item>
+        <item>next_icon</item>
+        <item>quick_panel_close_icon</item>
+    </string-array>
+    <string-array name="restore_smusic_colors_titles">
+        <item>Artist text color</item>
+        <item>Title text color</item>
+        <item>Prev button Icon color</item>
+        <item>Play Pause button Icon color</item>
+        <item>Next button Icon color</item>
+        <item>Close button Icon color</item>
+    </string-array>
+    <integer-array name="restore_smusic_colors_values">
+        <item>-12407597</item>
+        <item>-14342875</item>
+        <item>-11180943</item>
+        <item>-11180943</item>
+        <item>-11180943</item>
+        <item>-11180943</item>
+    </integer-array>
+    <string-array name="lowbattpercentage_entries">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="lowbattpercentage_values">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="critbattpercentage_entries">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="critbattpercentage_values">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
 </resources>

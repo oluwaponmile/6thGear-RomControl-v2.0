@@ -36,8 +36,6 @@
                     android:summary="Clock display and alignment"
                     android:title="Set Color">
                     <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                        alphaSlider="true"
-                        hexValue="true"
                         android:defaultValue="-1"
                         android:key="lockscreen_owner_text_color"
                         android:summary=""
@@ -131,7 +129,7 @@
             android:title="Individual Clock Colors, Fonts &amp; Seconds mod">
             <PreferenceCategory
                 android:layout="@layout/preferences_category"
-                android:title="Clock Fonts">
+                android:title="Clock Fonts &amp; Visibilities">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="false"
                     android:key="use_lockscreen_clock_font_style"
@@ -150,6 +148,12 @@
                     android:summaryOff="Hidden"
                     android:summaryOn="Shown"
                     android:title="Show Seconds" />
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                    android:defaultValue="true"
+                    android:key="phronesis_digital_clock_visibility"
+                    android:summaryOff="Clock Hidden"
+                    android:summaryOn="Clock Shown"
+                    android:title="LockScreen Clock Visibility" />
             </PreferenceCategory>
             <PreferenceCategory
                 android:layout="@layout/preferences_category"
@@ -169,7 +173,7 @@
                     android:summaryOn="Enabled.  Clock and date all use the same color."
                     android:title="Clock Global Color" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffffff"
+                    android:defaultValue="-1"
                     android:dependency="kg_clock_global_toggle"
                     android:key="kg_clock_global_color"
                     android:summary="Set single color"
@@ -247,7 +251,24 @@
             android:title="Weather Items Colors and Bar. Pressure Toggles">
             <PreferenceCategory
                 android:layout="@layout/preferences_category"
-                android:title="Colorized Weather">
+                android:title="LockScreen Simple weather">
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                    android:defaultValue="false"
+                    android:key="phronesis_keyguard_weather_simple"
+                    android:summaryOff="Hidden"
+                    android:summaryOn="Refresh weather widget to apply"
+                    android:title="Simple Weather View"
+                    phronesis:isSilent="false"
+                    phronesis:packageNameToKill="com.android.systemui" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                    android:defaultValue="-1"
+                    android:key="phronesis_simple_weather_color"
+                    android:summary="Refresh weather widget to apply"
+                    android:title="Simple Weather Color" />
+            </PreferenceCategory>
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="LockScreen Full weather">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                     android:defaultValue="false"
                     android:key="phronesis_weather_visibility"
@@ -257,15 +278,14 @@
                     phronesis:isSilent="false"
                     phronesis:packageNameToKill="com.android.systemui" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffffff"
-                    android:dependency="phronesis_weather_visibility"
+                    android:defaultValue="-1"
                     android:key="color_temp"
                     android:summary=""
                     android:title="Text-degree Color"
                     phronesis:isSilent="false"
                     phronesis:packageNameToKill="com.android.systemui" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffffff"
+                    android:defaultValue="-1"
                     android:dependency="phronesis_weather_visibility"
                     android:key="color_high_temp"
                     android:summary=""
@@ -273,7 +293,7 @@
                     phronesis:isSilent="false"
                     phronesis:packageNameToKill="com.android.systemui" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffffff"
+                    android:defaultValue="-1"
                     android:dependency="phronesis_weather_visibility"
                     android:key="color_low_temp"
                     android:summary=""
@@ -281,7 +301,7 @@
                     phronesis:isSilent="false"
                     phronesis:packageNameToKill="com.android.systemui" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffffff"
+                    android:defaultValue="-1"
                     android:dependency="phronesis_weather_visibility"
                     android:key="color_sunrise"
                     android:summary=""
@@ -289,7 +309,7 @@
                     phronesis:isSilent="false"
                     phronesis:packageNameToKill="com.android.systemui" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffffff"
+                    android:defaultValue="-1"
                     android:dependency="phronesis_weather_visibility"
                     android:key="color_location"
                     android:summary=""
@@ -297,7 +317,7 @@
                     phronesis:isSilent="false"
                     phronesis:packageNameToKill="com.android.systemui" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffffff"
+                    android:defaultValue="-1"
                     android:dependency="phronesis_weather_visibility"
                     android:key="color_sunset"
                     android:summary=""
@@ -305,7 +325,7 @@
                     phronesis:isSilent="false"
                     phronesis:packageNameToKill="com.android.systemui" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffffff"
+                    android:defaultValue="-1"
                     android:dependency="phronesis_weather_visibility"
                     android:key="color_text"
                     android:summary=""
@@ -343,7 +363,7 @@
                     android:summaryOn="Shown"
                     android:title="Pressure Scale Text" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-                    android:defaultValue="\#ffffffff"
+                    android:defaultValue="-1"
                     android:dependency="phronesis_weather_visibility"
                     android:key="color_barometr"
                     android:summary=""
@@ -355,7 +375,7 @@
     </PreferenceCategory>
     <PreferenceCategory
         android:layout="@layout/preferences_category"
-        android:title="AOD brightness">
+        android:title="AOD Brightness And Ambient Display">
         <PreferenceScreen
             android:summary="Adjust AOD brightness"
             android:title="AOD custom brightness">
@@ -365,10 +385,14 @@
                 <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
                     android:defaultValue="17"
                     android:key="aod_brightness"
-                    android:title="AOD brightness"
+                    android:title="AOD Brightness"
                     phronesis:maxValue="255"
                     phronesis:minValue="0"
                     phronesis:rebootDevice="true" />
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                    android:defaultValue="0"
+                    android:key="doze_enabled"
+                    android:title="Ambient Display" />
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>

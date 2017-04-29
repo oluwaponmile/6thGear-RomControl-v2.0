@@ -49,4 +49,8 @@
         android:summary="Fix GPS to your continent location"
         android:title="FasterGPS"
         phronesis:componentName="org.fastergps/org.fastergps.ui.BaseActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Configure apps shown in recent menu "
+        android:title="Recently"
+        phronesis:componentName="eu.chainfire.recently/eu.chainfire.recently.SettingsActivity" />
 </PreferenceScreen>

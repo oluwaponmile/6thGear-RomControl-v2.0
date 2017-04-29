@@ -67,4 +67,62 @@
             android:summaryOn="Volume Warning Currently Disabled"
             android:title="Loud Volume Warning" />
     </PreferenceScreen>
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Volume Dialog Custom Colors" />
+    <PreferenceScreen
+        android:summary="Loud Volume Warning Toggle"
+        android:title="Volume panel custom colors">
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+            android:defaultValue="-328966"
+            android:key="volume_panel_color"
+            android:title="Volume Panel Background" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+            android:defaultValue="-14606047"
+            android:key="volume_title_color"
+            android:title="Volume Panel Text" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+            android:defaultValue="-6381922"
+            android:key="volume_icon_color"
+            android:title="Volume Panel Icons" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+            android:defaultValue="-11549705"
+            android:key="volume_thumb_color"
+            android:title="Volume Panel Thumb" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+            android:defaultValue="-2039584"
+            android:key="volume_progress_bar_bg_color"
+            android:title="Volume Progress bar Background" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+            android:defaultValue="-11549705"
+            android:key="volume_progress_bar_color"
+            android:title="Volume Progress bar Foreground" />
+        <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+            android:icon="@drawable/restorecolour"
+            android:summary="This action will restore Volume colors to Stock"
+            android:title="Restore colors to stock values"
+            phronesis:keysList="@array/restore_volumepanel_colors_keys"
+            phronesis:packageNameToKill="com.android.systemui"
+            phronesis:titlesList="@array/restore_volumepanel_colors_titles"
+            phronesis:valuesList="@array/restore_volumepanel_colors_values" />
+    </PreferenceScreen>
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Volume Panel Expanded Timeout Delay" />
+    <PreferenceScreen
+        android:summary="Volume Panel Expanded Timeout Delay Mod"
+        android:title="Volume Panel Expanded Timeout Delay">
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+            android:defaultValue="3000"
+            android:entries="@array/volpanel_timeout_pulsar_entries"
+            android:entryValues="@array/volpanel_timeout_values"
+            android:key="volume_panel_expanded_timeout"
+            android:title="Volume Panel Popup Timeout Delay" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+            android:defaultValue="5000"
+            android:entries="@array/volpanel_timeout_entries"
+            android:entryValues="@array/volpanel_timeout_values"
+            android:key="volpanel_timeout"
+            android:title="Volume Panel Expand Timeout Delay" />
+    </PreferenceScreen>
 </PreferenceScreen>
