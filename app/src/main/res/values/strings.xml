@@ -1,21 +1,13 @@
-<!--/*      Created by Roberto Mariani and Anna Berkovitch, 2015-2016-->
-    <!--This program is free software: you can redistribute it and/or modify-->
-    <!--it under the terms of the GNU General Public License as published by-->
-    <!--the Free Software Foundation, either version 3 of the License, or-->
-    <!--(at your option) any later version.-->
+<!--/*      Created by Roberto Mariani and Anna Berkovitch, 2015-2016--><!--This program is free software: you can redistribute it and/or modify--><!--it under the terms of the GNU General Public License as published by--><!--the Free Software Foundation, either version 3 of the License, or--><!--(at your option) any later version.-->
 
-    <!--This program is distributed in the hope that it will be useful,-->
-    <!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
-    <!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
-    <!--GNU General Public License for more details.-->
+<!--This program is distributed in the hope that it will be useful,--><!--but WITHOUT ANY WARRANTY; without even the implied warranty of--><!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the--><!--GNU General Public License for more details.-->
 
-    <!--You should have received a copy of the GNU General Public License-->
-    <!--along with this program.  If not, see <http://www.gnu.org/licenses/>.*/-->
+<!--You should have received a copy of the GNU General Public License--><!--along with this program.  If not, see <http://www.gnu.org/licenses/>.*/-->
 <resources>
     <string name="app_name">Rom Control</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-	<string name="dialog_color_picker">Pick Color</string>
+    <string name="dialog_color_picker">Pick Color</string>
     <string name="press_color_to_apply">Press to apply</string>
     <string name="root_progress_dialog_title">Acquiring Root Access</string>
     <string name="root_progress_dialog_message">Please wait…</string>
@@ -58,19 +50,19 @@
     <string name="reboot_now_dialog_button">reboot now</string>
     <string name="imminent_reboot_warning">Your device will reboot IMMEDIATELY upon script completion!!!</string>
     <string name="restore_dialog_description">This action will restore the following items to stock colors</string>
-	<!--These strings are to set the default fragment to open for the first time the app launches-->
-	<string name="statusbar_prefs">Statusbar Mods</string>
-	<string name="lockscreen_prefs">Lockscreen Mods</string>
+    <!--These strings are to set the default fragment to open for the first time the app launches-->
+    <string name="statusbar_prefs">Statusbar Mods</string>
+    <string name="lockscreen_prefs">Lockscreen Mods</string>
     <string name="sound_mod_panel_prefs">Sound Mod Panel</string>
     <string name="theme_dialog_title">Choose theme</string>
     <string name="usefull_apps_prefs">Useful Apps</string>
     <string name="utilites_prefs">Utilities</string>
-	<string name="set_theme">Set Theme</string>
-	<string name="backup_device_prefs">Backup Device Databases</string>
-	<string name="backup_and_restore">Backup &amp; Restore</string>
-	<string name="buttons_swipe_prefs">Soft + Virtual Key Settings</string>
-	<string name="adv_device_mods_prefs">Advanced Device Mods</string>
-	<string name="listview_accelerate_decelerate_interpolator">Accelerate decelerate</string>
+    <string name="set_theme">Set Theme</string>
+    <string name="backup_device_prefs">Backup Device Databases</string>
+    <string name="backup_and_restore">Backup &amp; Restore</string>
+    <string name="buttons_swipe_prefs">Soft + Virtual Key Settings</string>
+    <string name="adv_device_mods_prefs">Advanced Device Mods</string>
+    <string name="listview_accelerate_decelerate_interpolator">Accelerate decelerate</string>
     <string name="listview_accelerate_interpolator">Accelerate</string>
     <string name="listview_alpha">Alpha</string>
     <string name="listview_anticipate_interpolator">Anticipate</string>
@@ -89,7 +81,7 @@
     <string name="listview_unfold">Unfold</string>
     <string name="listview_wave_left">Wave (left)</string>
     <string name="listview_wave_right">Wave (right)</string>
-	<string name="volbtn_music_controls_summary">Customize volume rocker action</string>
+    <string name="volbtn_music_controls_summary">Customize volume rocker action</string>
     <string name="volbtn_music_controls_title">Music Control</string>
     <string name="volbtn_timeout_summary">%s</string>
     <string name="volbtn_timeout_title">Button delay</string>
@@ -98,7 +90,7 @@
     <string name="volbtn_vol_down_title">Volume Down action</string>
     <string name="volbtn_vol_up_summary">%s</string>
     <string name="volbtn_vol_up_title">Volume Up action</string>
-	<string name="weekday_pm_am_summary">%s</string>
+    <string name="weekday_pm_am_summary">%s</string>
     <string name="clock_position_summary">%s</string>
     <string name="toast_animation_title">Toast animations</string>
     <string name="toast_none_animation">None</string>
@@ -118,7 +110,7 @@
     <string name="toast_SlideLeftRight_animation">Slide Left To Right Animation</string>
     <string name="toast_SlideRightLeft_animation">Slide Right To Left Animation</string>
     <string name="ime_animation_test_title">Test IME Animation Here</string>
-	<string name="dsb_gradient_filter_value_0">Off</string>
+    <string name="dsb_gradient_filter_value_0">Off</string>
     <string name="dsb_gradient_filter_value_1">Only on the desktop</string>
     <string name="dsb_gradient_filter_value_2">Everywhere except the desktop</string>
     <string name="dsb_gradient_filter_value_3">On</string>

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -98,7 +97,7 @@ public class MyListPreference extends ListPreference implements Preference.OnPre
     public void setValue(String value) {
         String oldValue = getValue();
         super.setValue(value);
-        if(!value.equals(oldValue)) {
+        if (!value.equals(oldValue)) {
             notifyDependencyChange(shouldDisableDependents());
         }
     }

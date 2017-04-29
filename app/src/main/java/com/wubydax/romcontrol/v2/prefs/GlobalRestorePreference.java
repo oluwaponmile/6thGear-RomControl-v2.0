@@ -63,6 +63,7 @@ public class GlobalRestorePreference extends DialogPreference {
             }
         }
     }
+
     @Override
     protected void onBindDialogView(View view) {
         super.onBindDialogView(view);
@@ -70,7 +71,7 @@ public class GlobalRestorePreference extends DialogPreference {
         int length = mTitles.length;
         for (int i = 0; i < length; i++) {
             stringBuilder.append(mTitles[i]);
-            if(i != length - 1) {
+            if (i != length - 1) {
                 stringBuilder.append("\n");
             }
         }
@@ -80,12 +81,12 @@ public class GlobalRestorePreference extends DialogPreference {
     @Override
     public void onClick(DialogInterface dialog, int which) {
         super.onClick(dialog, which);
-        if(which == AlertDialog.BUTTON_POSITIVE) {
+        if (which == AlertDialog.BUTTON_POSITIVE) {
             int length = mKeys.length;
-            for (int i = 0; i < length ; i++) {
+            for (int i = 0; i < length; i++) {
                 Settings.System.putInt(getContext().getContentResolver(), mKeys[i], mValues[i]);
-                Preference preference =  findPreferenceInHierarchy(mKeys[i]);
-                if(preference != null && preference instanceof ColorPickerPreference) {
+                Preference preference = findPreferenceInHierarchy(mKeys[i]);
+                if (preference != null && preference instanceof ColorPickerPreference) {
                     ((ColorPickerPreference) preference).setColor(mValues[i]);
                 }
             }

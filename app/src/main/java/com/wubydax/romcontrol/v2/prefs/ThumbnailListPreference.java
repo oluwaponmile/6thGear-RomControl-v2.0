@@ -112,7 +112,6 @@ public class ThumbnailListPreference extends DialogPreference implements Adapter
     }
 
 
-
     @Override
     public boolean shouldDisableDependents() {
         return super.shouldDisableDependents() || getPersistedString(null) == null || getPersistedString(null).equals(mDependentValue);
@@ -184,7 +183,7 @@ public class ThumbnailListPreference extends DialogPreference implements Adapter
         String oldValue = getPersistedString(null);
         String newValue = mEntryValuesList[i].toString();
         persistString(newValue);
-        if(oldValue != null && !oldValue.equals(newValue)) {
+        if (oldValue != null && !oldValue.equals(newValue)) {
             notifyDependencyChange(shouldDisableDependents());
         }
         Settings.System.putString(mContext.getContentResolver(), getKey(), newValue);

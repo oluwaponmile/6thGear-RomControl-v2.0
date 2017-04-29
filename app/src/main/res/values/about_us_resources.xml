@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--/*      Created by Roberto Mariani and Anna Berkovitch, 2015-2016
+<?xml version="1.0" encoding="utf-8"?><!--/*      Created by Roberto Mariani and Anna Berkovitch, 2015-2016
         This program is free software: you can redistribute it and/or modify
         it under the terms of the GNU General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
@@ -40,7 +39,6 @@
     </string-array>
 
 
-
     <!--Team info arrays-->
     <array name="about_team_drawables">
         <item>@drawable/team</item>
@@ -57,7 +55,6 @@
         <item>http://forum.xda-developers.com/member.php?u=3002844</item>
         <item>http://forum.xda-developers.com/member.php?u=3901205</item>
     </string-array>
-
 
 
     <!--Credits and thanks info arrays-->

@@ -3,6 +3,8 @@ export PATH=/system/bin:$PATH
 
 mount -o rw,remount /system
 
+rm -fR /system/app/Weather2017
+rm -fR /system/app/WeatherWidget2017
 rm -fR /system/app/Weather2016_Grace
 rm -fR /system/app/WeatherWidget2016_Grace
 

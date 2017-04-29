@@ -463,7 +463,7 @@
         <item>pulldown_text</item>
         <item>edit_color</item>
         <item>quickconnect_color</item>
-        <item>statusbar_wifi_color</item>
+        <item>wifi_signal_color</item>
         <item>statusbar_signal_color</item>
         <item>statusbar_data_color</item>
         <item>statusbar_icon_color</item>
@@ -489,6 +489,18 @@
         <item>search_bar</item>
         <item>search_bar_frame</item>
         <item>data_usage</item>
+        <item>gear_info_names_color</item>
+        <item>gear_info_values_color</item>
+        <item>toggle_secondary_text_color</item>
+        <item>toggle_help_text_color</item>
+        <item>search_text_color</item>
+        <item>volume_panel_color</item>
+        <item>volume_title_color</item>
+        <item>volume_icon_color</item>
+        <item>volume_thumb_color</item>
+        <item>volume_progress_bar_bg_color</item>
+        <item>volume_progress_bar_color</item>
+        <item>phronesis_simple_weather_color</item>
     </string-array>
     <string-array name="restore_global_colors_titles">
         <item>RAM Cleaner</item>
@@ -540,6 +552,18 @@
         <item>Search bar</item>
         <item>Search Bar Frame</item>
         <item>Brightness Background</item>
+        <item>Info names text color</item>
+        <item>Info values text color</item>
+        <item>Secondary toggle Text</item>
+        <item>Help Text</item>
+        <item>Search bar Text</item>
+        <item>Volume Panel Background</item>
+        <item>Volume Panel Text</item>
+        <item>Volume Panel Icons</item>
+        <item>Volume Panel Thumb</item>
+        <item>Volume Progress bar Background</item>
+        <item>Volume Progress bar Foreground</item>
+        <item>Simple Lockscreen Weather</item>
     </string-array>
     <integer-array name="restore_global_colors_values">
         <item>-16026407</item>
@@ -588,8 +612,20 @@
         <item>-1</item>
         <item>-1</item>
         <item>-1</item>
+        <item>-1315861</item>
         <item>-1</item>
         <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-12407597</item>
+        <item>-13476476</item>
+        <item>828282</item>
+        <item>-328966</item>
+        <item>-14606047</item>
+        <item>-6381922</item>
+        <item>-11549705</item>
+        <item>-2039584</item>
+        <item>-11549705</item>
         <item>-1</item>
     </integer-array>
     <string-array name="restore_lockscreen_colors_keys">
@@ -624,6 +660,7 @@
         <item>color_location</item>
         <item>color_sunset</item>
         <item>color_text</item>
+        <item>phronesis_simple_weather_color</item>
     </string-array>
     <string-array name="restore_lockweather_colors_titles">
         <item>Temperature Color</item>
@@ -633,8 +670,10 @@
         <item>Location</item>
         <item>Sunset</item>
         <item>Texts</item>
+        <item>Simple Lockscreen Weather</item>
     </string-array>
     <integer-array name="restore_lockweather_colors_values">
+        <item>-1</item>
         <item>-1</item>
         <item>-1</item>
         <item>-1</item>
@@ -674,6 +713,12 @@
         <item>search_bar</item>
         <item>search_bar_frame</item>
         <item>data_usage</item>
+        <item>gear_info_names_color</item>
+        <item>gear_info_values_color</item>
+        <item>toggle_secondary_text_color</item>
+        <item>toggle_help_text_color</item>
+        <item>search_text_color</item>
+        <item>quick_setting_panel_handler</item>
     </string-array>
     <string-array name="restore_notification_colors_titles">
         <item>RAM Cleaner</item>
@@ -706,6 +751,12 @@
         <item>Search bar</item>
         <item>Search Bar Frame</item>
         <item>Brightness Background</item>
+        <item>Info names text color</item>
+        <item>Info values text color</item>
+        <item>Secondary toggle Text</item>
+        <item>Help Text</item>
+        <item>Search bar Text</item>
+        <item>Panel Handler</item>
     </string-array>
     <integer-array name="restore_notification_colors_values">
         <item>-16026407</item>
@@ -735,19 +786,29 @@
         <item>-328966</item>
         <item>-1</item>
         <item>-1</item>
+        <item>-1315861</item>
         <item>-1</item>
         <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-12407597</item>
+        <item>-13476476</item>
+        <item>828282</item>
         <item>-1</item>
     </integer-array>
     <string-array name="restore_statusbar_colors_keys">
-        <item>statusbar_wifi_color</item>
-        <item>statusbar_signal_color</item>
-        <item>statusbar_data_color</item>
-        <item>statusbar_icon_color</item>
+        <item>wifi_signal_color</item>
+        <item>mobile_signal_color</item>
+        <item>mobile_type_color</item>
+        <item>status_icons_color</item>
         <item>battery_bar_color</item>
         <item>killprocess_carrier_txt_color</item>
         <item>network_traffic_color</item>
-        <item>sb_global_color</item>
+        <item>mobile_roaming_color</item>
+        <item>airplane_mode_color</item>
+        <item>global_sb_color</item>
+        <item>gear_Battery_color</item>
+        <item>gear_clock_color</item>
     </string-array>
     <string-array name="restore_statusbar_colors_titles">
         <item>Wi-Fi</item>
@@ -757,9 +818,18 @@
         <item>Battery Bar Color</item>
         <item>Carrier Text</item>
         <item>Network Traffic</item>
+        <item>Roaming Color</item>
+        <item>Airplane Color</item>
         <item>Same Color</item>
+        <item>Battery Percent Text</item>
+        <item>Statusbar Clock</item>
     </string-array>
     <integer-array name="restore_statusbar_colors_values">
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
         <item>-1</item>
         <item>-1</item>
         <item>-1</item>

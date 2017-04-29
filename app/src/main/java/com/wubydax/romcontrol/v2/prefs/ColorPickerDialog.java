@@ -58,6 +58,12 @@ public class ColorPickerDialog
     private int mOrientation;
     private View mLayout;
 
+    public ColorPickerDialog(Context context, int initialColor) {
+        super(context);
+
+        init(initialColor);
+    }
+
     @Override
     public void onGlobalLayout() {
         if (getContext().getResources().getConfiguration().orientation != mOrientation) {
@@ -68,16 +74,6 @@ public class ColorPickerDialog
             mNewColor.setColor(newcolor);
             mColorPicker.setColor(newcolor);
         }
-    }
-
-    public interface OnColorChangedListener {
-        void onColorChanged(int color);
-    }
-
-    public ColorPickerDialog(Context context, int initialColor) {
-        super(context);
-
-        init(initialColor);
     }
 
     private void init(int color) {
@@ -164,6 +160,10 @@ public class ColorPickerDialog
 
     }
 
+    public boolean getHexValueEnabled() {
+        return mHexValueEnabled;
+    }
+
     public void setHexValueEnabled(boolean enable) {
         mHexValueEnabled = enable;
         if (enable) {
@@ -172,10 +172,6 @@ public class ColorPickerDialog
             updateHexValue(getColor());
         } else
             mHexVal.setVisibility(View.GONE);
-    }
-
-    public boolean getHexValueEnabled() {
-        return mHexValueEnabled;
     }
 
     private void updateHexLengthFilter() {
@@ -194,16 +190,16 @@ public class ColorPickerDialog
         mHexVal.setTextColor(mHexDefaultTextColor);
     }
 
+    public boolean getAlphaSliderVisible() {
+        return mColorPicker.getAlphaSliderVisible();
+    }
+
     public void setAlphaSliderVisible(boolean visible) {
         mColorPicker.setAlphaSliderVisible(visible);
         if (mHexValueEnabled) {
             updateHexLengthFilter();
             updateHexValue(getColor());
         }
-    }
-
-    public boolean getAlphaSliderVisible() {
-        return mColorPicker.getAlphaSliderVisible();
     }
 
     /**
@@ -243,5 +239,9 @@ public class ColorPickerDialog
         super.onRestoreInstanceState(savedInstanceState);
         mOldColor.setColor(savedInstanceState.getInt("old_color"));
         mColorPicker.setColor(savedInstanceState.getInt("new_color"), true);
+    }
+
+    public interface OnColorChangedListener {
+        void onColorChanged(int color);
     }
 }

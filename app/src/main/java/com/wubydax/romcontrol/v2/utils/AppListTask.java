@@ -28,7 +28,8 @@ import java.util.List;
 
 
 public class AppListTask extends AsyncTask<Void, Void, List<AppInfo>> {
-    private  OnListCreatedListener mOnListCreatedListener;
+    private OnListCreatedListener mOnListCreatedListener;
+
     @Override
     protected List<AppInfo> doInBackground(Void... voids) {
         PackageManager packageManager = MyApp.getContext().getPackageManager();
@@ -61,7 +62,7 @@ public class AppListTask extends AsyncTask<Void, Void, List<AppInfo>> {
 
     @Override
     protected void onPostExecute(List<AppInfo> appInfo) {
-        if(mOnListCreatedListener != null) {
+        if (mOnListCreatedListener != null) {
             mOnListCreatedListener.onListCreated(appInfo);
         }
     }

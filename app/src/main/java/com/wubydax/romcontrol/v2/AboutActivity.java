@@ -19,6 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+
 /*      Created by Roberto Mariani and Anna Berkovitch, 2015-2016
         This program is free software: you can redistribute it and/or modify
         it under the terms of the GNU General Public License as published by
@@ -122,11 +123,11 @@ public class AboutActivity extends AppCompatActivity {
         } else if (teamIds.contains(id)) {
             linksList = Arrays.asList(getResources().getStringArray(R.array.about_team_links));
             url = linksList.get(teamIds.indexOf(id));
-        } else if(creditsIds.contains(id)) {
+        } else if (creditsIds.contains(id)) {
             linksList = Arrays.asList(getResources().getStringArray(R.array.about_credits_links));
             url = linksList.get(creditsIds.indexOf(id));
         }
-        if(url != null) {
+        if (url != null) {
             openUrl(url);
         } else {
             Toast.makeText(MyApp.getContext(), "Invalid URL", Toast.LENGTH_SHORT).show();

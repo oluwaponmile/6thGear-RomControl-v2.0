@@ -30,7 +30,7 @@ public class SuTask extends AsyncTask<Void, Void, Boolean> {
     protected void onPostExecute(Boolean isGranted) {
         if (mOnSuCompletedListener != null) {
 
-                mOnSuCompletedListener.onTaskCompleted(isGranted);
+            mOnSuCompletedListener.onTaskCompleted(isGranted);
 
         }
     }

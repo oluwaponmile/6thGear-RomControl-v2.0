@@ -8,8 +8,8 @@ rm -fR /system/app/WeatherWidget2017
 rm -fR /system/app/Weather2016_Grace
 rm -fR /system/app/WeatherWidget2016_Grace
 
-cp -R /data/media/0/PhronesisUtils/weather/stock/system/app/Weather2016_Grace /system/app/
-cp -R /data/media/0/PhronesisUtils/weather/stock/system/app/WeatherWidget2016_Grace /system/app/
+cp -R /data/media/0/PhronesisUtils/weather/s8lockweather/system/app/Weather2016_Grace /system/app/
+cp -R /data/media/0/PhronesisUtils/weather/s8lockweather/system/app/WeatherWidget2016_Grace /system/app/
 chmod 755 /system/app/Weather2016_Grace
 chmod 755 /system/app/WeatherWidget2016_Grace
 chmod 644 /system/app/Weather2016_Grace/Weather2016_Grace.apk

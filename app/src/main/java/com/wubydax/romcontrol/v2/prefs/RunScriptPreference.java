@@ -42,7 +42,7 @@ public class RunScriptPreference extends Preference {
     private final String mReverseDependencyKey;
     private String mFilePath;
     private boolean mIsConfirmRequired;
-    private  int mRebootType;
+    private int mRebootType;
 
     public RunScriptPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -54,9 +54,9 @@ public class RunScriptPreference extends Preference {
         mPackageToKill = generalTypedArray.getString(R.styleable.Preference_packageNameToKill);
         mIsSilent = generalTypedArray.getBoolean(R.styleable.Preference_isSilent, true);
         mReverseDependencyKey = generalTypedArray.getString(R.styleable.Preference_reverseDependency);
-        if(typedArray.hasValue(R.styleable.RunScriptPreference_rebootOptions)) {
+        if (typedArray.hasValue(R.styleable.RunScriptPreference_rebootOptions)) {
             mRebootType = typedArray.getInt(R.styleable.RunScriptPreference_rebootOptions, 0);
-            if(mRebootType == 2) {
+            if (mRebootType == 2) {
                 mIsConfirmRequired = true;
             }
         }
@@ -79,9 +79,9 @@ public class RunScriptPreference extends Preference {
     @Override
     protected void onClick() {
         super.onClick();
-        if(mIsConfirmRequired) {
+        if (mIsConfirmRequired) {
             String message = String.format(Locale.getDefault(), getContext().getString(R.string.confirm_script_dialog_message), getTitle());
-            if(mRebootType == 2) {
+            if (mRebootType == 2) {
                 message = message + "\n\n" + getContext().getString(R.string.imminent_reboot_warning);
             }
             new AlertDialog.Builder(getContext())
@@ -110,12 +110,12 @@ public class RunScriptPreference extends Preference {
                     Toast.makeText(getContext(), String.valueOf(exitCode), Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getContext(), R.string.command_executed_success_toast, Toast.LENGTH_SHORT).show();
-                    if(mRebootType == 1) {
+                    if (mRebootType == 1) {
                         Utils.showRebootRequiredDialog(getContext());
-                    } else if (mRebootType ==2 ) {
+                    } else if (mRebootType == 2) {
                         ((PowerManager) getContext().getSystemService(Context.POWER_SERVICE)).reboot(null);
-                    } else if(mPackageToKill != null && Utils.isPackageInstalled(mPackageToKill)) {
-                        if(mIsSilent) {
+                    } else if (mPackageToKill != null && Utils.isPackageInstalled(mPackageToKill)) {
+                        if (mIsSilent) {
                             Utils.killPackage(mPackageToKill);
                         } else {
                             Utils.showKillPackageDialog(mPackageToKill, getContext());

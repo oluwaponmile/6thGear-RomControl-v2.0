@@ -20,8 +20,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingLeft="5dp"
-    android:paddingRight="5dp"
-    >
+    android:paddingRight="5dp">
 
     <com.wubydax.romcontrol.v2.prefs.ColorPickerView
         android:id="@+id/color_picker_view"
@@ -52,10 +51,10 @@
             android:layout_weight="1"
             android:hint="HEX"
             android:imeOptions="actionDone"
+            android:inputType="textCapCharacters"
             android:maxLength="7"
             android:singleLine="true"
-            android:inputType="textCapCharacters"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout

@@ -13,7 +13,6 @@ import android.preference.PreferenceScreen;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -100,7 +99,7 @@ public class PrefsFragment extends PreferenceFragment implements Preference.OnPr
                 }
             } else if (preference instanceof OpenAppPreference) {
                 if (!((OpenAppPreference) preference).isInstalled()) {
-                    if(preferenceGroup.removePreference(preference)) {
+                    if (preferenceGroup.removePreference(preference)) {
                         i--;
                     }
                 }
@@ -114,8 +113,8 @@ public class PrefsFragment extends PreferenceFragment implements Preference.OnPr
     public boolean onPreferenceClick(Preference preference) {
         if (((PreferenceScreen) preference).getPreferenceCount() > 0) {
             setUpNestedPreferenceLayout((PreferenceScreen) preference);
-        } else if(preference.getIntent() != null) {
-            if(MyApp.getContext().getPackageManager().resolveActivity(preference.getIntent(), 0) != null) {
+        } else if (preference.getIntent() != null) {
+            if (MyApp.getContext().getPackageManager().resolveActivity(preference.getIntent(), 0) != null) {
                 startActivity(preference.getIntent());
             }
         }

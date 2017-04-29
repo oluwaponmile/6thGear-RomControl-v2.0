@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--/*      Created by Roberto Mariani and Anna Berkovitch, 2015-2016
+<?xml version="1.0" encoding="utf-8"?><!--/*      Created by Roberto Mariani and Anna Berkovitch, 2015-2016
         This program is free software: you can redistribute it and/or modify
         it under the terms of the GNU General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
@@ -16,8 +15,7 @@
     android:interpolator="@android:anim/linear_interpolator">
     <alpha
 
-        android:fromAlpha="0"
-        android:toAlpha="1.0"
         android:duration="200"
-        />
+        android:fromAlpha="0"
+        android:toAlpha="1.0" />
 </set>

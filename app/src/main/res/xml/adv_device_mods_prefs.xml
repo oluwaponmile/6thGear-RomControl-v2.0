@@ -96,7 +96,7 @@
                 phronesis:rebootOptions="imminent"
                 phronesis:scriptFileName="s8weather.sh" />
             <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
-                android:summary="Refresh weather widget before use. No horizontal 5x1 widget support"
+                android:summary="No horizontal 5x1 widget support"
                 android:title="S8 Weather With Lockscreen Weather"
                 phronesis:rebootOptions="imminent"
                 phronesis:scriptFileName="s8weather_lockweather.sh" />

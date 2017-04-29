@@ -77,7 +77,7 @@ public class FilePreference extends SwitchPreference implements Preference.OnPre
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         boolean isChecked = (boolean) newValue;
-        if(isChecked) {
+        if (isChecked) {
             try {
                 mFile.createNewFile();
                 BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(mFile), 16 * 1024);
