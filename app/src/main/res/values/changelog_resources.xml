@@ -9,37 +9,60 @@
     This order is how they will appear in the dialog
     Make any order you want from top to bottom-->
     <string-array name="changelog_items">
-        <item>Added display option in Settings to address Max Power Saving resolution</item>
-        <item>Made more modes available for N4 Camera. Seperate files</item>
-        <item>White Gallery should now be completely fixed for users that still have issues</item>
-        <item>Busybox rework and updated</item>
-        <item>Added fix for Gallery Auto Adjust</item>
-        <item>Added charging fix for all kernel. Thanks to Ghost</item>
-        <item>Updated N4 Camera filters</item>
-        <item>Signature verification removal reworked</item>
-        <item>Uneeded libs cleaned out</item>
-        <item>Night clock fixed from blinking</item>
-        <item>Fix some lags when opening settings app</item>
-        <item>Added 10 custom GPS config file in rom control. User can try which works best for them.</item>
-        <item>MAX Power Saving Mode fixed. No need for rom control fix</item>
-        <item>Fixed SystemUI FC when applying Power Saving mode</item>
-        <item>New Wifi Password Manager</item>
-        <item>Increase Wifi connection keep alive</item>
-        <item>Increase Mobile Signal connection keep alive</item>
-        <item>Improve power management</item>
-        <item>Complete Gallery auto enhance fix</item>
-        <item>No need for screen density slider, Power should modes works out of the box</item>
-        <item>Improvements to s7e and N7 camera</item>
-        <item>Touchwiz updated with more functionality. Now long press to launch action</item>
-        <item>Added Matrix effect in recent panel</item>
-        <item>Added Launcher option for infinite scrolling in rom control and aroma</item>
-        <item>And many more. Please see our thread for full changelog</item>
+        <item>Ability to use Google Assitant with any of the 2 included home longpress framework</item>
+        <item>All individual colors or same color, with option to use tint at the same time.</item>
+        <item>Ability to assign Google Assitant to any of the device key - assign from all virtual buttons, screen swipe, screen sweep with any framework selected</item>
+        <item>Use Google Assitant without setting country to US</item>
+        <item>Quick Toggle colors mod</item>
+        <item>Quick Toggle Text mod</item>
+        <item>Global switch to restore all notification colors to stock for theme applications and original stock look</item>
+        <item>Removed ON/OFF from switches in settings for good application of themes</item>
+        <item>Added color option for search text with global restore</item>
+        <item>Lockscreen statusbar clock hidden for Potato clock</item>
+        <item>Lockscreen statusbar clock hidden for Phronesis clock</item>
+        <item>Charger connect animation with colors</item>
+        <item>Added option for s8 launcher with support for s8 Google widget</item>
+        <item>s8 Lockscreen and Weather font</item>
+        <item>Build.prop tweak for speaker phone</item>
+        <item>Secondary toggle text color. E.g. The wifi ssid name</item>
+        <item>Panel Handler color, conforms to global switch</item>
+        <item>Simple lockscreen weather color feature</item>
+        <item>Set low battery warning notification</item>
+        <item>Set critical battery warning notification</item>
+        <item>Added Power Menu background for MM Style</item>
+        <item>Ambient Display with switch option in rom control</item>
+        <item>Full Samsung Music color mod</item>
+        <item>Battery text color implemented with tint working at the same time</item>
+        <item>Now use tint and color at the same on statusbar icons. Tint on white background and color on dark background</item>
+        <item>Toggle animations applied when global toggle set to stock</item>
+        <item>Toggle help text color which also conform to global switch</item>
+        <item>Fixed Off Screen Memo</item>
+        <item>Fixed Stock SystemUI flashlight settings</item>
+        <item>Turn OFF flashlight from notification panel</item>
+        <item>Battery Bar reworked with more options. Now possible to select gradient</item>
+        <item>Custom Carrier label rework. More option added</item>
+        <item>Aroma option for Chainfire Systemless rooting</item>
+        <item>Aroma option for system mode rooting - patching to make it system mode install</item>
+        <item>Aroma option for Magisk rooting. Includes Magisk manager and SuperSU</item>
+        <item>Global switch to restore all notification colors to stock for theme applications and original stock look</item>
+        <item>Bluetooth Share FC on Systemless root should be fixed</item>
+        <item>Same color switch for statusbar icon</item>
+        <item>C9 Smart Manager aroma option removed as some were confused with this. Can be installed in rom control</item>
+        <item>Added option for s8 launcher with support for s8 Google widget</item>
+        <item>Custom carrier now keeps color after a restart</item>
+        <item>Rom control UI rework for some preferences and few things tidy up</item>
+        <item>Fixed clock color disappearing after each restart for Potato clock and Phronesis Style clock</item>
+        <item>Kernel Updated. Now at 1.2g. Fixes call issues for people that experienced it. And other improvements</item>
+        <item>Kernel add-on path updated</item>
+        <item>Better support for systemless rooting</item>
+        <item>A lot of applications updated. Over 20 apps for this release</item>
+        <item>And a lot more changes which has not been mentioned here. Please visit our rom thread of full changes</item>
     </string-array>
 
     <!--This will be the dialog title.
     Put your own rom version and name.
     Have fun-->
-    <string name="rom_version_for_changelog">Phronesis N7 Port V4</string>
+    <string name="rom_version_for_changelog">Phronesis N7 Port V6</string>
 
 
 </resources>
