@@ -250,8 +250,7 @@
                 android:summaryOff="Ongoing Notifications are permanent"
                 android:summaryOn="Ongoing Notifications are removeable"
                 android:title="Make Ongoing Notifications Removable"
-                phronesis:isSilent="false"
-                phronesis:packageNameToKill="com.android.systemui" />
+                phronesis:rebootOptions="imminent" />
             <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
                 android:defaultValue="true"
                 android:key="psm_notif"
