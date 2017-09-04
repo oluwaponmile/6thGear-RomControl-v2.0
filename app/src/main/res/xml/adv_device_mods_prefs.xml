@@ -19,6 +19,22 @@
     </PreferenceCategory>
     <PreferenceCategory
         android:layout="@layout/preferences_category"
+        android:title="Power Menu Preference">
+        <PreferenceScreen android:title="Power Menu Theme">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Up to 20 seconds wait"
+                android:title="Nougat Theme"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="powernougat.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Up to 20 seconds wait"
+                android:title="Stock Theme"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="powerstock.sh" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
         android:title="Home LongPress Support">
         <PreferenceScreen android:title="Home LongPress Support">
             <com.wubydax.romcontrol.v2.prefs.RunScriptPreference

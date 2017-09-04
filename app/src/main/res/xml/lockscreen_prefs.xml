@@ -59,7 +59,7 @@
                         phronesis:isSilent="false"
                         phronesis:packageNameToKill="com.android.systemui" />
                     <com.wubydax.romcontrol.v2.prefs.MyEditTextPreference
-                        android:defaultValue=""
+                        android:defaultValue="@string/lockdefaultcarrier"
                         android:dependency="custom_lock_carrier"
                         android:dialogTitle="Set Custom Text"
                         android:key="custom_lock_carrier_text"
@@ -265,7 +265,7 @@
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
                     android:defaultValue="-1"
                     android:key="phronesis_simple_weather_color"
-                    android:summary="Refresh weather widget to apply"
+                    android:summary="Toggle OFF/ON Simple Weather View button above and refresh weather widget to apply"
                     android:title="Simple Weather Color" />
             </PreferenceCategory>
             <PreferenceCategory

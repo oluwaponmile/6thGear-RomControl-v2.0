@@ -560,6 +560,26 @@
                         phronesis:isSilent="false"
                         phronesis:packageNameToKill="com.android.systemui" />
                 </PreferenceCategory>
+                <PreferenceCategory
+                    android:layout="@layout/preferences_category"
+                    android:title="Set Toggle animation  ">
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:entries="@array/qs_tile_animation_style_entries"
+                        android:entryValues="@array/qs_tile_animation_style_values"
+                        android:key="phronesis_anim_tile_style"
+                        android:title="Style" />
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:entries="@array/qs_tile_animation_duration_entries"
+                        android:entryValues="@array/qs_tile_animation_duration_values"
+                        android:key="phronesis_anim_tile_duration"
+                        android:title="Duration" />
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                        android:defaultValue="7"
+                        android:entries="@array/qs_tile_animation_interpolator_entries"
+                        android:entryValues="@array/qs_tile_animation_interpolator_values"
+                        android:key="phronesis_anim_tile_interpolator"
+                        android:title="Interpolator" />
+                </PreferenceCategory>
             </PreferenceScreen>
             <PreferenceCategory
                 android:layout="@layout/preferences_category"
@@ -884,7 +904,7 @@
                     phronesis:isSilent="false"
                     phronesis:packageNameToKill="com.android.systemui" />
                 <com.wubydax.romcontrol.v2.prefs.MyEditTextPreference
-                    android:defaultValue="Custom Text"
+                    android:defaultValue="@string/carrierlabeldefault"
                     android:dependency="is_custom_carrier_label"
                     android:key="custom_carrier_label"
                     android:title="Custom text for carrier label" />

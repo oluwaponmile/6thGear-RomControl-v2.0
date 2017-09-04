@@ -6,6 +6,10 @@
         android:title="Open Settings"
         phronesis:componentName="com.android.settings/com.android.settings.Settings" />
     <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
+        android:summary="Configure TouchWiz launcher preference"
+        android:title="TouchWiz Launcher Settings"
+        phronesis:componentName="com.mods.grx.settings.touchwizhome/com.mods.grx.settings.GrxSettingsActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference
         android:summary="Control Root access"
         android:title="SuperSu"
         phronesis:componentName="eu.chainfire.supersu/eu.chainfire.supersu.MainActivity-Material" />

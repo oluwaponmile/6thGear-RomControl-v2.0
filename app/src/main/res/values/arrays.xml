@@ -2028,4 +2028,74 @@
         <item>3</item>
         <item>5</item>
     </string-array>
+    <string-array name="qs_tile_animation_style_entries">
+        <item>@string/qs_tile_animation_style_off</item>
+        <item>@string/qs_tile_animation_style_flip</item>
+        <item>@string/qs_tile_animation_style_rotate</item>
+    </string-array>
+    <string-array name="qs_tile_animation_style_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="qs_tile_animation_duration_entries">
+        <item>@string/qs_tile_animation_duration_low</item>
+        <item>@string/qs_tile_animation_duration_default</item>
+        <item>@string/qs_tile_animation_duration_fast</item>
+        <item>@string/qs_tile_animation_duration_superfast</item>
+    </string-array>
+    <string-array name="qs_tile_animation_duration_values">
+        <item>2000</item>
+        <item>1500</item>
+        <item>1000</item>
+        <item>500</item>
+    </string-array>
+    <string-array name="qs_tile_animation_interpolator_entries">
+        <item>@string/qs_tile_animation_interpolator_linearInterpolator</item>
+        <item>@string/qs_tile_animation_interpolator_accelerateInterpolator</item>
+        <item>@string/qs_tile_animation_interpolator_decelerateInterpolator</item>
+        <item>@string/qs_tile_animation_interpolator_accelerateDecelerateInterpolator</item>
+        <item>@string/qs_tile_animation_interpolator_bounceInterpolator</item>
+        <item>@string/qs_tile_animation_interpolator_overshootInterpolator</item>
+        <item>@string/qs_tile_animation_interpolator_anticipateInterpolator</item>
+        <item>@string/qs_tile_animation_interpolator_anticipateOvershootInterpolator</item>
+    </string-array>
+    <string-array name="qs_tile_animation_interpolator_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="expansion_view_animation_entries">
+        <item>@string/expansion_view_animation_down</item>
+        <item>@string/expansion_view_animation_enter</item>
+        <item>@string/expansion_view_animation_left</item>
+        <item>@string/expansion_view_animation_right</item>
+        <item>@string/expansion_view_animation_rotate</item>
+        <item>@string/expansion_view_animation_turn</item>
+        <item>@string/expansion_view_animation_up</item>
+        <item>@string/expansion_view_recents_enter</item>
+        <item>@string/expansion_view_fade</item>
+        <item>@string/expansion_view_last_app</item>
+        <item>@string/expansion_view_search_bar</item>
+        <item>@string/expansion_view_toko_toast</item>
+    </string-array>
+    <string-array name="expansion_view_animation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
 </resources>
