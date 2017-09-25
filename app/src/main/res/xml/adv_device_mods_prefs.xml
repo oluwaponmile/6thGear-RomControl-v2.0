@@ -19,8 +19,8 @@
     </PreferenceCategory>
     <PreferenceCategory
         android:layout="@layout/preferences_category"
-        android:title="Power Menu Preference">
-        <PreferenceScreen android:title="Power Menu Theme">
+        android:title="Power Menu Theme Preference">
+        <PreferenceScreen android:title="Nougat Or Stock Power Menu Theme">
             <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
                 android:summary="Up to 20 seconds wait"
                 android:title="Nougat Theme"
@@ -31,6 +31,22 @@
                 android:title="Stock Theme"
                 phronesis:rebootOptions="imminent"
                 phronesis:scriptFileName="powerstock.sh" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="LTE or 4G Data Icon">
+        <PreferenceScreen android:title="Mobile Data Icon Type">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Change 4G data icon to LTE"
+                android:title="LTE Icon Selection"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="lteicon.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+                android:summary="Change LTE data icon to 4G"
+                android:title="4G Icon Selection"
+                phronesis:rebootOptions="imminent"
+                phronesis:scriptFileName="4gicon.sh" />
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory
